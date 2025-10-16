@@ -2,7 +2,7 @@
 const CreateYourStyle = () => {
   return (
     <div
-      className="relative w-full h-[600px] rounded-3xl overflow-hidden bg-center bg-cover" // 👈 agrega tu ruta de imagen aquí
+      className="relative w-full h-[600px] rounded-3xl overflow-hidden bg-center bg-cover" 
     >
         <img src="./img/collageimag.svg" alt="Seccion create your style" />
       <div className="absolute inset-0 bg-black/20"></div>
