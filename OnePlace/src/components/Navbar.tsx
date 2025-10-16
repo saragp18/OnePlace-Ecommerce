@@ -1,7 +1,6 @@
- import React from "react";
-import Logo from "../assets/LOGO BOLSO 2.png";
-import LookIcon from "../assets/lupa.png"; 
-import CartIcon from "../assets/cart.png"; 
+import Logo from "/img/LOGO BOLSO 2.png";
+import LookIcon from "/img/lupa.png"; 
+import CartIcon from "/img/cart.png"; 
 function Navbar() {
   return (
     <header

@@ -1,7 +1,7 @@
 /*import React from "react";*/
 import SearchBar from "../components/Navbar";
 import ViewAllBtn from "../components/ViewAllBtn";
-import sweaterImg from "../assets/sueter one-place.jpg";
+import sweaterImg from "/img/sueter one-place.jpg";
 
 function Home() {
   return (
