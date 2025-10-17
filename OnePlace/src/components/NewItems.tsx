@@ -12,7 +12,7 @@ const setups = [
 
 const repeatedSetups = [...setups, ...setups];
 
-export default function CollageVass() {
+export default function NewItems() {
   return (
     <section className="bg-white py-20 overflow-hidden">
        <h2 className="text-base tracking-[2px] mb-12 font-semibold text-gray-900 text-center">

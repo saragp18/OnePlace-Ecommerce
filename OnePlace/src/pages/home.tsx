@@ -2,14 +2,14 @@ import Categories from '../components/Categories'
 import CreateYourStyle from '../components/CreateYourStyle'
 import Footer from '../components/Footer'
 import Hero from '../components/Hero'
-import CollageVass from '../components/NewItems'
+import NewItems from '../components/NewItems'
 
 function Home() {
 
   return (
     <>
       <Hero />
-      <CollageVass/>
+      <NewItems/>
       <Categories />
       <CreateYourStyle />
       <Footer/>
