@@ -3,17 +3,17 @@ function NewItems() {
     {
       id: 1,
       name: "Wide High Ankle Jeans",
-      image: "/img/JeanItems.jpg",
+      image: "/img/JeanItems.png",
     },
     {
       id: 2,
       name: "Short leather-effect jacket with pockets",
-      image: "/img/JacketItem.jpg",
+      image: "/img/JacketItem.png",
     },
     {
       id: 3,
       name: "Short-sleeved print T-shirt",
-      image: "/img/CamisetaItems.jpg",
+      image: "/img/CamisetaItems.png",
     },
   ];
 
