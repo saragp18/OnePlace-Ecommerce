@@ -1,10 +1,9 @@
 import './App.css'
 import Home from './pages/home'
-import CreateYourStyle from './components/CreateYourStyle'
 import NewItems from './components/NewItems'
-import CategoryCardProps from './components/CategoriesGrid'
 import Categories from "./components/CategoriesGrid"
-
+import CategoryCardProps from './components/CategoriesGrid'
+import CreateYourStyle from './components/CreateYourStyle'
 
 function App() {
 
@@ -12,9 +11,10 @@ function App() {
     <>
       < Home />
       <NewItems/>
+      <Categories />
       <CreateYourStyle />
       <CategoryCardProps/>
-      <Categories />
+    
 
 
     </>
