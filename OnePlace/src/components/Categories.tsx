@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 const categories = [
   { name: "WOMEN", image: "/img/Mujer.jpg" },
   { name: "MEN", image: "/img/Hombre.jpg" },
@@ -22,18 +24,19 @@ const Categories = () => {
             key={category.name}
             className="relative group overflow-hidden rounded-3xl cursor-pointer"
           >
-            
-            <img
-              src={category.image}
-              alt={category.name}
-              className="w-full h-[600px] object-cover transition-transform duration-300 group-hover:scale-105"
-            />
+            <NavLink to="/categories">
+              <img
+                src={category.image}
+                alt={category.name}
+                className="w-full h-[600px] object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </NavLink>
 
-            
+
+
             <div
-              className={`absolute ${
-                index % 2 === 0 ? "bottom-0 left-0" : "bottom-0 right-0"
-              } bg-white px-6 py-3 rounded-tl-2xl rounded-tr-2xl md:rounded-none md:rounded-tl-none md:rounded-tr-none md:rounded-br-none md:rounded-bl-none`}
+              className={`absolute ${index % 2 === 0 ? "bottom-0 left-0" : "bottom-0 right-0"
+                } bg-white px-6 py-3 rounded-tl-2xl rounded-tr-2xl md:rounded-none md:rounded-tl-none md:rounded-tr-none md:rounded-br-none md:rounded-bl-none`}
             >
               <p className="text-base md:text-lg font-semibold tracking-widest text-gray-900">
                 {category.name}

@@ -22,6 +22,9 @@ const routes= createBrowserRouter ([{
 },{
   path:"/sell",
   element: <h2> sell page</h2>
+},{
+  path:"/collection",
+  element: <h2> Collection page</h2>
 }])
 
 createRoot(document.getElementById('root')!).render(
