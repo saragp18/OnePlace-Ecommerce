@@ -1,5 +1,3 @@
-import React from "react";
-
 const categories = [
   { name: "WOMEN", image: "/img/Mujer.jpg" },
   { name: "MEN", image: "/img/Hombre.jpg" },
