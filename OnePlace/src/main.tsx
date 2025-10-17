@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Home from './pages/home.tsx'
-import { h2 } from 'framer-motion/client'
+
 const routes= createBrowserRouter ([{
   path:"/home",
   element:<Home/>
