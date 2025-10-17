@@ -25,7 +25,7 @@ export default function NewItems() {
           animate={{ x: ["0%", "-50%"] }}
           transition={{
             repeat: Infinity,
-            duration: 30, // velocidad del loop
+            duration: 30, 
             ease: "linear",
           }}
         >
