@@ -85,7 +85,7 @@ function Footer() {
 
       
       <div className="flex flex-wrap justify-between items-center text-gray-500">
-        <p>OnePlace.co © 2000–2023, All Rights Reserved</p>
+        <p>OnePlace.co © 2025, All Rights Reserved</p>
         <div className="flex gap-3 mt-3 md:mt-0">
           <img src="/img/Visa.jpg" alt="Visa" className="w-20 h-15" />
           <img src="/img/Mastercard.jpg" alt="Mastercard" className="w-20 h-15" />
