@@ -1,16 +1,5 @@
 import { NavLink } from "react-router-dom";
-
-const categories = [
-  { name: "WOMEN", image: "/img/Mujer.jpg" },
-  { name: "MEN", image: "/img/Hombre.jpg" },
-  { name: "JACKETS", image: "/img/JacketNegra.jpg" },
-  { name: "JEANS", image: "/img/JeanGris.jpg" },
-  { name: "SHIRTS", image: "/img/CamisaAzul.jpg" },
-  { name: "T-SHIRTS", image: "/img/CamisetaRosa.jpg" },
-  { name: "BERMUDA SHORTS", image: "/img/ShortJean.jpg" },
-  { name: "SWEATERS", image: "/img/SacoAtelier.jpg" },
-];
-
+import categories from "../data/products.json"
 const Categories = () => {
   return (
     <section className="text-center py-16 bg-white">
