@@ -8,7 +8,7 @@ function NewItems() {
     {
       id: 2,
       name: "Short leather-effect jacket with pockets",
-      image: "/img/JacketItem.webp",
+      image: "/img/JacketItem.jpg",
     },
     {
       id: 3,
