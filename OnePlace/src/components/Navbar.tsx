@@ -11,14 +11,21 @@ function Navbar() {
       "
     >
       
-      <div className="absolute left-2 flex items-center space-x-2"> 
-            <img
-              src="/img/OnePlaceLogo1.svg"
-              alt="Logo OnePlace"
-              className="w-12 h-12"
-            />
-            <span className="font-medium text-gray-800">ONEPLACE</span>
-          </div>
+      <div className="flex items-center space-x-2 sm:space-x-3">
+        <img
+          src={Logo}
+          alt="OnePlace Logo"
+          className="w-6 h-6 sm:w-8 sm:h-8 object-contain"
+        />
+        <p
+          className="
+            text-base sm:text-lg lg:text-xl
+            font-light tracking-wide text-black
+          "
+        >
+          ONEPLACE
+        </p>
+      </div>
 
       
       <div
