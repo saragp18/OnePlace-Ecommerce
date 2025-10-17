@@ -2,7 +2,9 @@ import './App.css'
 import Home from './pages/home'
 import CreateYourStyle from './components/CreateYourStyle'
 import NewItems from './components/NewItems'
-import CategoriesGrid from './components/CategoriesGrid'; 
+import CategoryCardProps from './components/CategoriesGrid'
+import Categories from "./components/CategoriesGrid"
+
 
 function App() {
 
@@ -11,7 +13,8 @@ function App() {
       < Home />
       <NewItems/>
       <CreateYourStyle />
-      <CategoriesGrid />
+      <CategoryCardProps/>
+      <Categories />
 
 
     </>
