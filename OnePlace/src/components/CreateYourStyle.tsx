@@ -4,7 +4,7 @@ const CreateYourStyle = () => {
     <div
       className="relative w-full h-[600px] rounded-3xl overflow-hidden bg-center bg-cover" 
     >
-        <img src="./img/collage.png" alt="Seccion create your style" />
+        <img src="./img/CreateYourStyle.svg" alt="Seccion create your style" />
       <div className="absolute inset-0 bg-black/20"></div>
 
       <div className="absolute right-10 top-1/2 -translate-y-1/2 text-right max-w-md">
