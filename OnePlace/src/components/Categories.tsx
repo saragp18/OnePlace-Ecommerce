@@ -22,14 +22,14 @@ const Categories = () => {
             key={category.name}
             className="relative group overflow-hidden rounded-3xl cursor-pointer"
           >
-            {/* Imagen */}
+            
             <img
               src={category.image}
               alt={category.name}
               className="w-full h-[500px] object-cover transition-transform duration-300 group-hover:scale-105"
             />
 
-            {/* Caja blanca en las esquinas */}
+            
             <div
               className={`absolute ${
                 index % 2 === 0 ? "bottom-0 left-0" : "bottom-0 right-0"
