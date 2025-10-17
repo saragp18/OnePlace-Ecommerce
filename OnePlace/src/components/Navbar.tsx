@@ -1,6 +1,7 @@
 import Logo from "/img/LOGO BOLSO 2.png";
 import LookIcon from "/img/lupa.png"; 
 import CartIcon from "/img/cart.png"; 
+import { NavLink } from "react-router-dom";
 function Navbar() {
   return (
     <header
@@ -34,9 +35,11 @@ function Navbar() {
         "
       >
         <nav className="flex space-x-3 sm:space-x-5">
+          <NavLink to={"/home"}>
           <button className="hover:bg-gray-100 px-2 sm:px-3 py-1 rounded-md transition-colors">
             HOME
           </button>
+          </NavLink>
           <button className="hover:bg-gray-100 px-2 sm:px-3 py-1 rounded-md transition-colors">
             NEW
           </button>
