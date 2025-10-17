@@ -9,7 +9,7 @@ const setups = [
   { id: 6, src: "/img/CamisetaItems.png" },
 ];
 
-// Duplicamos las imágenes para lograr el loop continuo
+
 const repeatedSetups = [...setups, ...setups];
 
 export default function CollageVass() {
