@@ -31,18 +31,30 @@ function Navbar() {
             HOME
           </button>
         </NavLink>
+
+        <NavLink to="/new">
         <button className="hover:bg-gray-100 px-2 sm:px-3 py-1 rounded-md transition-colors">
           NEW
         </button>
+        </NavLink>
+
+        <NavLink to="/categories">
         <button className="hover:bg-gray-100 px-2 sm:px-3 py-1 rounded-md transition-colors">
           CATEGORIES
         </button>
+        </NavLink>
+
+        <NavLink to="/moresells">
         <button className="hover:bg-gray-100 px-2 sm:px-3 py-1 rounded-md transition-colors">
           MORE SELLS
         </button>
+        </NavLink>
+
+        <NavLink to="/sell">
         <button className="hover:bg-gray-100 px-2 sm:px-3 py-1 rounded-md transition-colors">
           SELL
         </button>
+        </NavLink>
       </nav>
 
       

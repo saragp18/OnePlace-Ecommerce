@@ -20,7 +20,7 @@ function Hero() {
         ></div>
 
         
-        <div className="w-full md:w-1/2 flex flex-col items-center md:items- justify-center sm:px-8 md:px-16 py-8 sm:py-12 text-center md:text-left bg-white transition-all duration-300">
+        <div className="w-full md:w-1/2 flex flex-col items-center md:items- justify-center sm:px-8 md:px-16 py-8 sm:py-12 text-center md:text-left bg-gray-100 transition-all duration-300">
           <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-ligt text-black leading-tight">
             WINTER
           </h1>
