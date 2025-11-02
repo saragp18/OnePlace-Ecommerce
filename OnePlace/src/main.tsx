@@ -5,7 +5,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Home from './pages/home.tsx'
 
 const routes= createBrowserRouter ([{
-  path:"/home",
+  path:"/",
   element:<Home/>
 
 },
