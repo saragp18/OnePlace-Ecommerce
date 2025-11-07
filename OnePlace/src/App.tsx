@@ -5,6 +5,7 @@ import Categories from "./components/Categories"
 import CreateYourStyle from './components/CreateYourStyle'
 import Footer from './components/Footer'
 
+
 function App() {
 
   return (
@@ -23,3 +24,5 @@ function App() {
 }
 
 export default App
+
+

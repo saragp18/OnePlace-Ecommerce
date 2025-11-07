@@ -1,5 +1,16 @@
 import { NavLink } from "react-router-dom";
-import categories from "../data/products.json"
+
+const categories = [
+  { name: "WOMEN", image: "/img/Mujer.jpg" },
+  { name: "MEN", image: "/img/Hombre.jpg" },
+  { name: "JACKETS", image: "/img/JacketNegra.jpg" },
+  { name: "JEANS", image: "/img/JeanGris.jpg" },
+  { name: "SHIRTS", image: "/img/CamisaAzul.jpg" },
+  { name: "T-SHIRTS", image: "/img/CamisetaRosa.jpg" },
+  { name: "BERMUDA SHORTS", image: "/img/ShortJean.jpg" },
+  { name: "SWEATERS", image: "/img/SacoAtelier.jpg" },
+];
+
 const Categories = () => {
   return (
     <section className="text-center py-16 bg-white">
@@ -21,11 +32,10 @@ const Categories = () => {
               />
             </NavLink>
 
-
-
             <div
-              className={`absolute ${index % 2 === 0 ? "bottom-0 left-0" : "bottom-0 right-0"
-                } bg-white px-6 py-3 rounded-tl-2xl rounded-tr-2xl md:rounded-none md:rounded-tl-none md:rounded-tr-none md:rounded-br-none md:rounded-bl-none`}
+              className={`absolute ${
+                index % 2 === 0 ? "bottom-0 left-0" : "bottom-0 right-0"
+              } bg-white px-6 py-3 rounded-tl-2xl rounded-tr-2xl md:rounded-none md:rounded-tl-none md:rounded-tr-none md:rounded-br-none md:rounded-bl-none`}
             >
               <p className="text-base md:text-lg font-semibold tracking-widest text-gray-900">
                 {category.name}
