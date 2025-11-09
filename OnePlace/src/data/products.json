@@ -1,59 +1,157 @@
 [
   {
     "id": 1,
-    "name": "NewProduct1",
-    "image": "/img/NewProduct1.jpg",
+    "name": "COTTON DRESS WITH SPAGUETTI STAPS ",
+    "image": "/img/NewProduct1.png",
     "category": "New Arrivals",
     "price": "$59.99"
   },
   {
     "id": 2,
-    "name": "NewProduct2",
-    "image": "/img/NewProduct2.jpg",
+    "name": "KNITTED BUTTON-UP JACKET",
+    "image": "/img/NewProduct2.png",
     "category": "New Arrivals",
     "price": "$64.99"
   },
   {
     "id": 3,
-    "name": "NewProduct3",
-    "image": "/img/NewProduct3.jpg",
+    "name": "FLOWING BLOUSE WITH RUFFLES",
+    "image": "/img/NewProduct3.png",
     "category": "New Arrivals",
     "price": "$72.50"
   },
   {
     "id": 4,
-    "name": "NewProduct4",
-    "image": "/img/NewProduct4.jpg",
+    "name": "TALLORING TROUSERS WITH CROSSED WAIST",
+    "image": "/img/NewProduct4.png",
     "category": "New Arrivals",
     "price": "$48.00"
   },
   {
     "id": 5,
-    "name": "NewProduct5",
-    "image": "/img/NewProduct5.jpg",
+    "name": "WIDE HIGH JEANS",
+    "image": "/img/NewProduct5.png",
     "category": "New Arrivals",
     "price": "$55.00"
   },
   {
     "id": 6,
-    "name": "NewProduct6",
-    "image": "/img/NewProduct6.jpg",
+    "name": "RUSTIC CUT-OUT MIDI DRESS",
+    "image": "/img/NewProduct6.png",
     "category": "New Arrivals",
     "price": "$68.00"
   },
   {
     "id": 7,
-    "name": "NewProduct7",
-    "image": "/img/NewProduct7.jpg",
+    "name": "OFF-THE-SHOULDER BLOUSE",
+    "image": "/img/NewProduct7.png",
     "category": "New Arrivals",
     "price": "$61.99"
   },
   {
     "id": 8,
-    "name": "NewProduct8",
-    "image": "/img/NewProduct8.jpg",
+    "name": "BARREL CROPPED PANTS",
+    "image": "/img/NewProduct8.png",
     "category": "New Arrivals",
     "price": "$70.00"
+  },{
+    "id": 9,
+    "name": "STRIPED SLEEVELESS PEPLUM TOP",
+    "image": "/img/ManProduct9.png",
+    "category": "New Arrivals",
+    "price": "$50.00"
+  },
+  {
+    "id": 10,
+    "name": "BLACK PLEATED SHORTS",
+    "image": "/img/ManProduct10.png",
+    "category": "New Arrivals",
+    "price": "$55.00"
+  },
+  {
+    "id": 11,
+    "name": "BLUE SWEATSHIRT WITH LOGO PRINT ",
+    "image": "/img/ManProduct11.png",
+    "category": "New Arrivals",
+    "price": "$60.00"
+  },
+  {
+    "id": 12,
+    "name": "BLACK HOODIE",
+    "image": "/img/ManProduct12.png",
+    "category": "New Arrivals",
+    "price": "$70.00"
+  },
+  {
+    "id": 13,
+    "name": "BLACK GRAPHIC SHORTS",
+    "image": "/img/ManProduct13.png",
+    "category": "New Arrivals",
+    "price": "$30.00"
+  },
+  {
+    "id": 14,
+    "name": "BROWN WIDE-LEG PANTS WITH STITCHING",
+    "image": "/img/ManProduct14.png",
+    "category": "New Arrivals",
+    "price": "$65.00"
+  },
+  {
+    "id": 15,
+    "name": "BLACK FADED BAGGY JEANS",
+    "image": "/img/ManProduct15.png",
+    "category": "New Arrivals",
+    "price": "$50.00"
+  },
+  {
+    "id": 16,
+    "name": "BLUE SPORTY PANTS WITH STRIPES",
+    "image": "/img/ManProduct16.png",
+    "category": "New Arrivals",
+    "price": "$65.00"
+  },
+  {
+    "id": 17,
+    "name": "LIGHT PINK SHORT-SLEEVE T-SHIRT",
+    "image": "/img/ManProduct17.png",
+    "category": "New Arrivals",
+    "price": "$47.00"
+  },{
+    "id": 18,
+    "name": "Baggy Jeans",
+    "image": "/img/BaggyJeans.png",
+    "category": "",
+    "price": ""
+
+  },
+  {
+    "id": 19,
+    "name": "Pants",
+    "image": "/img/Pants.png",
+    "category": "",
+    "price": ""
+  },
+  {
+    "id": 20,
+    "name": "Shorts",
+    "image": "/img/Shorts.png",
+    "category": "",
+    "price": ""
+  },
+  {
+    "id": 21,
+    "name": "Hoodies",
+    "image": "/img/Hoodies.png",
+    "category": "",
+    "price": ""
+  },
+  {
+    "id": 22,
+    "name": "T-Shirts",
+    "image": "/img/Tshirts.png",
+    "category": "",
+    "price": ""
+    
   }
 ]
 

@@ -9,17 +9,19 @@ import Footer from './components/Footer'
 function App() {
 
   return (
-    <>
-      < Home />
-      <NewItems/>
+    <div>
+      <Home />
+      <NewItems />
       <Categories />
       <CreateYourStyle />
-      <Footer/>
-    
-    
+      <Footer />
+    </div>
 
 
-    </>
+
+
+
+
   )
 }
 
