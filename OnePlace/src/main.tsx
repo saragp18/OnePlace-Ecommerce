@@ -3,19 +3,20 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Home from './pages/home.tsx'
+import NewPage from './pages/newPage.tsx'
+import CategoriesPage from './pages/categoriesPage.tsx'
 
-const routes= createBrowserRouter ([{
+const Routes= createBrowserRouter([{
   path:"/",
   element:<Home/>
-
 },
 {
   path:"/new",
-  element: <h2> new page</h2>
+  element: <NewPage />
 },
 {
   path:"/categories",
-  element: <h2> Categories page</h2>
+  element: <CategoriesPage />
 },{
   path:"/moresells",
   element: <h2> More Sells page</h2>
@@ -29,6 +30,6 @@ const routes= createBrowserRouter ([{
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <RouterProvider router={routes}/>
+    <RouterProvider router={Routes}/>
   </StrictMode>,
 )
