@@ -7,7 +7,7 @@ function CategoriesBanner() {
      
       <div className="absolute inset-0 bg-opacity-60"></div>
 
-      <h2 className="text-black bg-white py-12 px-150 text-4xl md:text-9xl font-bold tracking-[6px]">
+      <h2 className="text-black bg-white py-12 px-150 text-4xl md:text-9xl font-Inter tracking-[6px]">
         CATEGORIES
       </h2>
     </section>
