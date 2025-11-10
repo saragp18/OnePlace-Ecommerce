@@ -5,21 +5,26 @@ import Categories from "./components/Categories"
 import CreateYourStyle from './components/CreateYourStyle'
 import Footer from './components/Footer'
 
+
 function App() {
 
   return (
-    <>
-      < Home />
-      <NewItems/>
+    <div>
+      <Home />
+      <NewItems />
       <Categories />
       <CreateYourStyle />
-      <Footer/>
-    
-    
+      <Footer />
+    </div>
 
 
-    </>
+
+
+
+
   )
 }
 
 export default App
+
+
