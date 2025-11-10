@@ -8,6 +8,7 @@ import NewPage from './pages/newPage.tsx'
 import CategoriesPage from './pages/categoriesPage.tsx'
 import ManPage from './pages/ManPage.tsx'
 import DetailProduct from './pages/detailProduct.tsx'
+import sellerprofile from './components/sellerprofile.tsx'
 
 
 const Routes= createBrowserRouter([{
@@ -30,14 +31,15 @@ const Routes= createBrowserRouter([{
 },{
   path:"/collection",
   element: <h2> Collection page</h2>
-},])
-},
-{
+},{
   path:"/men",
   element: <ManPage/>
 },{
   path:"/Product/:id",
   element:<DetailProduct/>
+},{
+  path::"/sellerprofile",
+  element: <sellerprofile />
 }])
 
 createRoot(document.getElementById('root')!).render(
