@@ -1,10 +1,309 @@
 [
-  { "name": "WOMEN", "image": "/img/Mujer.jpg" },
-  { "name": "MEN", "image": "/img/Hombre.jpg" },
-  { "name": "JACKETS", "image": "/img/JacketNegra.jpg" },
-  { "name": "JEANS", "image": "/img/JeanGris.jpg" },
-  { "name": "SHIRTS", "image": "/img/CamisaAzul.jpg" },
-  { "name": "T-SHIRTS", "image": "/img/CamisetaRosa.jpg" },
-  { "name": "BERMUDA SHORTS", "image": "/img/ShortJean.jpg" },
-  { "name": "SWEATERS", "image": "/img/SacoAtelier.jpg" }
+  {
+    "id": 1,
+    "name": "COTTON DRESS WITH SPAGUETTI STRAPS",
+    "price": "$59.99",
+    "color": "Beige",
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "description": "Light cotton dress with thin straps and a soft flowing texture. Designed for comfort and everyday style.",
+    "materials": [
+      "100% cotton",
+      "Machine wash max. 30°C",
+      "Do not bleach or tumble dry"
+    ],
+    "image": ["/img/NewProduct1.png"]
+  },
+  {
+    "id": 2,
+    "name": "KNITTED BUTTON-UP JACKET",
+    "price": "$64.99",
+    "color": "Ivory",
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "description": "Knitted jacket with front button closure and a soft texture, ideal for layering in cooler seasons.",
+    "materials": [
+      "60% cotton, 40% polyester",
+      "Hand wash cold",
+      "Lay flat to dry"
+    ],
+    "image": ["/img/NewProduct2.png"]
+  },
+  {
+    "id": 3,
+    "name": "FLOWING BLOUSE WITH RUFFLES",
+    "price": "$72.50",
+    "color": "White",
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "description": "Elegant blouse with delicate ruffles and a flowing silhouette for a refined look.",
+    "materials": [
+      "100% viscose",
+      "Iron at low temperature",
+      "Do not bleach"
+    ],
+    "image": ["/img/NewProduct3.png"]
+  },
+  {
+    "id": 4,
+    "name": "TAILORING TROUSERS WITH CROSSED WAIST",
+    "price": "$48.00",
+    "color": "Black",
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "description": "High-waisted tailored trousers featuring a crossed waist detail and straight leg cut.",
+    "materials": [
+      "65% polyester, 35% viscose",
+      "Dry clean recommended"
+    ],
+    "image": ["/img/NewProduct4.png"]
+  },
+  {
+    "id": 5,
+    "name": "WIDE HIGH JEANS",
+    "price": "$55.00",
+    "color": "Light blue",
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "description": "High-rise jeans with a wide leg and relaxed fit for modern comfort and style.",
+    "materials": [
+      "100% cotton",
+      "Machine wash cold",
+      "Color may fade over time"
+    ],
+    "image": ["/img/NewProduct5.png"]
+  },
+  {
+    "id": 6,
+    "name": "RUSTIC CUT-OUT MIDI DRESS",
+    "price": "$68.00",
+    "color": "Terracotta",
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "description": "Rustic-style midi dress with side cut-outs and adjustable straps. Breathable and lightweight fabric.",
+    "materials": [
+      "80% cotton, 20% linen",
+      "Wash inside out",
+      "Dry flat"
+    ],
+    "image": ["/img/NewProduct6.png"]
+  },
+  {
+    "id": 7,
+    "name": "OFF-THE-SHOULDER BLOUSE",
+    "price": "$61.99",
+    "color": "White",
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "description": "Romantic off-the-shoulder blouse with elastic neckline and soft texture.",
+    "materials": [
+      "100% cotton",
+      "Iron at medium temperature",
+      "Do not bleach"
+    ],
+    "image": ["/img/NewProduct7.png"]
+  },
+  {
+    "id": 8,
+    "name": "BARREL CROPPED PANTS",
+    "price": "$70.00",
+    "color": "Beige",
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "description": "Modern barrel-fit cropped pants with pleats and comfortable elastic waistband.",
+    "materials": [
+      "98% cotton, 2% elastane",
+      "Machine wash cold",
+      "Iron inside out"
+    ],
+    "image": ["/img/NewProduct8.png"]
+  },
+  {
+    "id": 9,
+    "name": "STRIPED SLEEVELESS PEPLUM TOP",
+    "price": "$50.00",
+    "color": "Blue striped",
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "description": "Sleeveless peplum top with striped pattern and fitted silhouette.",
+    "materials": [
+      "100% cotton",
+      "Gentle cycle wash",
+      "Do not tumble dry"
+    ],
+    "image": ["/img/ManProduct9.png"]
+  },
+  {
+    "id": 10,
+    "name": "BLACK PLEATED SHORTS",
+    "price": "$55.00",
+    "color": "Black",
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "description": "Structured black shorts with pleats and side pockets for an elevated casual look.",
+    "materials": [
+      "100% cotton",
+      "Machine wash cold",
+      "Iron on reverse"
+    ],
+    "image": ["/img/ManProduct10.png"]
+  },
+  {
+    "id": 11,
+    "name": "BLUE SWEATSHIRT WITH LOGO PRINT",
+    "price": "$60.00",
+    "color": "Blue",
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "description": "Casual sweatshirt in soft cotton fabric featuring front logo print.",
+    "materials": [
+      "80% cotton, 20% polyester",
+      "Machine wash warm",
+      "Do not bleach"
+    ],
+    "image": ["/img/ManProduct11.png"]
+  },
+  {
+    "id": 12,
+    "name": "BLACK HOODIE",
+    "price": "$70.00",
+    "color": "Black",
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "description": "Classic black hoodie with kangaroo pocket and adjustable drawstrings.",
+    "materials": [
+      "70% cotton, 30% polyester",
+      "Machine wash cold",
+      "Tumble dry low"
+    ],
+    "image": ["/img/ManProduct12.png"]
+  },
+  {
+    "id": 13,
+    "name": "BLACK GRAPHIC SHORTS",
+    "price": "$30.00",
+    "color": "Black",
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "description": "Soft cotton shorts with printed design and elastic waistband.",
+    "materials": [
+      "100% cotton",
+      "Machine wash cold",
+      "Do not iron print"
+    ],
+    "image": ["/img/ManProduct13.png"]
+  },
+  {
+    "id": 14,
+    "name": "BROWN WIDE-LEG PANTS WITH STITCHING",
+    "price": "$65.00",
+    "color": "Brown",
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "description": "Wide-leg pants with visible stitching and mid-rise waist for relaxed fit.",
+    "materials": [
+      "100% cotton",
+      "Machine wash max. 30°C",
+      "Iron medium"
+    ],
+    "image": ["/img/ManProduct14.png"]
+  },
+  {
+    "id": 15,
+    "name": "BLACK FADED BAGGY JEANS",
+    "price": "$50.00",
+    "color": "Washed black",
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "description": "Baggy jeans with washed effect and relaxed silhouette.",
+    "materials": [
+      "100% cotton",
+      "Wash separately",
+      "Color may transfer"
+    ],
+    "image": ["/img/ManProduct15.png"]
+  },
+  {
+    "id": 16,
+    "name": "BLUE SPORTY PANTS WITH STRIPES",
+    "price": "$65.00",
+    "color": "Blue with white stripes",
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "description": "Sporty pants with side stripes and elastic waistband for a comfortable fit.",
+    "materials": [
+      "95% polyester, 5% elastane",
+      "Machine wash cold",
+      "Do not bleach"
+    ],
+    "image": ["/img/ManProduct16.png"]
+  },
+  {
+    "id": 17,
+    "name": "LIGHT PINK SHORT-SLEEVE T-SHIRT",
+    "price": "$47.00",
+    "color": "Light pink",
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "description": "Soft cotton T-shirt with classic crew neck and short sleeves.",
+    "materials": [
+      "100% cotton",
+      "Machine wash warm",
+      "Do not bleach"
+    ],
+    "image": ["/img/ManProduct17.png"]
+  },
+  {
+    "id": 18,
+    "name": "BAGGY JEANS",
+    "price": "$55.00",
+    "color": "Blue denim",
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "description": "Relaxed baggy jeans with wide leg and soft cotton denim.",
+    "materials": [
+      "100% cotton",
+      "Machine wash cold",
+      "Do not bleach"
+    ],
+    "image": ["/img/BaggyJeans.png"]
+  },
+  {
+    "id": 19,
+    "name": "PANTS",
+    "price": "$50.00",
+    "color": "Black",
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "description": "Versatile straight-fit pants suitable for daily wear.",
+    "materials": [
+      "97% cotton, 3% elastane",
+      "Iron low",
+      "Do not bleach"
+    ],
+    "image": ["/img/Pants.png"]
+  },
+  {
+    "id": 20,
+    "name": "SHORTS",
+    "price": "$45.00",
+    "color": "Beige",
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "description": "Casual shorts with comfortable elastic waist and side pockets.",
+    "materials": [
+      "100% cotton",
+      "Machine wash cold",
+      "Tumble dry low"
+    ],
+    "image": ["/img/Shorts.png"]
+  },
+  {
+    "id": 21,
+    "name": "HOODIES",
+    "price": "$65.00",
+    "color": "Gray",
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "description": "Classic hoodie with soft lining and adjustable drawstring hood.",
+    "materials": [
+      "80% cotton, 20% polyester",
+      "Machine wash cold",
+      "Do not bleach"
+    ],
+    "image": ["/img/Hoodies.png"]
+  },
+  {
+    "id": 22,
+    "name": "T-SHIRTS",
+    "price": "$35.00",
+    "color": "White",
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "description": "Soft cotton T-shirt with regular fit and round neckline.",
+    "materials": [
+      "100% cotton",
+      "Machine wash warm",
+      "Do not tumble dry"
+    ],
+    "image": ["/img/Tshirts.png"]
+  }
 ]
