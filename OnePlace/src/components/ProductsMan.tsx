@@ -1,8 +1,9 @@
+import { useNavigate } from "react-router-dom";
 import products from "../data/products.json";
 
 const ProductsMan = () => {
-  const newProducts = products.filter((p) => p.id >= 9 && p.id <= 17);
-
+  const ProductsMan = products.filter((p) => p.id >= 9 && p.id <= 17);
+  const navigate = useNavigate();
 
   return (
     <section className="max-w-7xl mx-auto px-6 py-12">
@@ -11,13 +12,16 @@ const ProductsMan = () => {
       </h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8">
-        {newProducts.map((item) => (
+        {ProductsMan.map((item) => (
           <div
             key={item.id}
             className="bg-gray-100 rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow duration-300"
+            onClick={() => navigate("/product/" + item.id, { state: item.id })
+        }
           >
+            
             <img
-              src={item.image}
+              src={item.image[0]}
               alt={item.name}
               className="w-full h-72 object-cover rounded-md mb-4"
             />
