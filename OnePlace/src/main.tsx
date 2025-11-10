@@ -5,6 +5,11 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Home from './pages/home.tsx'
 import NewPage from './pages/newPage.tsx'
 
+import CategoriesPage from './pages/categoriesPage.tsx'
+import ManPage from './pages/ManPage.tsx'
+import DetailProduct from './pages/detailProduct.tsx'
+
+
 const Routes= createBrowserRouter([{
   path:"/",
   element:<Home/>
@@ -14,6 +19,9 @@ const Routes= createBrowserRouter([{
   element: <NewPage />
 },
 {
+  path:"/categories",
+  element: <CategoriesPage />
+},{
   path:"/moresells",
   element: <h2> More Sells page</h2>
 },{
@@ -23,6 +31,14 @@ const Routes= createBrowserRouter([{
   path:"/collection",
   element: <h2> Collection page</h2>
 },])
+},
+{
+  path:"/men",
+  element: <ManPage/>
+},{
+  path:"/Product/:id",
+  element:<DetailProduct/>
+}])
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
