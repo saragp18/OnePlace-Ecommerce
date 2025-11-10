@@ -1,4 +1,6 @@
+import { useNavigate } from "react-router-dom";
 import products from "../data/products.json";
+const navigate = useNavigate();
 
 const ProductsMoresells = () => {
   const newProducts = products.filter((p) => p.id >= 23 && p.id <= 31);
@@ -15,9 +17,10 @@ const ProductsMoresells = () => {
           <div
             key={item.id}
             className="bg-gray-100 rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow duration-300"
+          onClick={() => navigate("/product/" + item.id, { state: item.id })}
           >
             <img
-              src={item.image}
+              src={item.image[0]}
               alt={item.name}
               className="w-full h-72 object-cover rounded-md mb-4 "
             />
