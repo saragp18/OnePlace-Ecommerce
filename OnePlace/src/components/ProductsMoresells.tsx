@@ -1,10 +1,10 @@
 import { useNavigate } from "react-router-dom";
 import products from "../data/products.json";
-const navigate = useNavigate();
+
 
 const ProductsMoresells = () => {
   const newProducts = products.filter((p) => p.id >= 23 && p.id <= 31);
-
+const navigate = useNavigate();
 
   return (
     <section className="max-w-7xl mx-auto px-6 py-12">

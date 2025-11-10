@@ -21,7 +21,7 @@ const routes= createBrowserRouter ([{
   element: <h2> Categories page</h2>
 },{
   path:"/moresells",
-  element: < Moresellspage/>
+  element: <Moresellspage/>
 },{
   path:"/sell",
   element: <h2> sell page</h2>
