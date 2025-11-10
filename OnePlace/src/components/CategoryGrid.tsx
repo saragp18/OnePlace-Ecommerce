@@ -13,7 +13,7 @@
           >
             <div className="w-full aspect-square bg-white rounded-lg shadow overflow-hidden">
               <img
-                src={category.image}
+                src={category.image[0]}
                 alt={category.name}
                 className="w-full h-full object-cover"
               />
