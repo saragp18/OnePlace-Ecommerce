@@ -12,6 +12,7 @@
       "Do not bleach or tumble dry"
     ],
     "image": ["/img/NewProduct1.png"]
+    
   },
   {
     "id": 2,
@@ -431,6 +432,640 @@
       "Do not tumble dry"
     ],
     "image": ["/img/MoreProduct17.png"]
-  }
+
+  },{
+"id": 32,
+"name": "OVERSIZED QUILTED JACKET",
+"price": "$47.53",
+"color": "Cream",
+"sizes": ["XS", "S", "M", "L", "XL"],
+"description": "Lightly padded nylon jacket with quilted design. Oversized model with ribbed stand-up collar, zipper closure, and front patch pockets with flaps. Straight hem with rounded side slits. Lined.",
+"materials": [
+"Lining: 100% polyester"
+],
+"image":["/img/Jacket1.png",
+"/img/Jacket1_1.png",
+"/img/Jacket1_2.png",
+"/img/Jacket1_3.png"
+]
+},{
+"id":33 ,
+"name": "OVERSIZED JACKET",
+"price": "$52.81",
+"color": "Light beige/Brown/Black",
+"sizes": ["XS", "S", "M", "L", "XL"],
+"description": "Oversized jacket with a brushed finish. Shirt collar, covered button closure, and front welt pockets with flaps. Lined.",
+"materials": [
+"Lining: 100% polyester"
+],
+"image": ["/img/Jacket2.png",
+"/img/Jacket2_1.png",
+"/img/Jacket2_2.png",
+"/img/Jacket2_3.png"
+]
+},{
+"id": 34,
+"name": "DOUBLE-SIDED JACKET",
+"price": "$63.38",
+"color": "Dark brown",
+"sizes": ["XS", "S", "M", "L", "XL"],
+"description": "Oversized jacket in soft fabric with a napped finish and coated fabric tape trim. Drop-shoulder design with a plush collar, button front closure, and piped side pockets. Plush lining.",
+"materials": [
+"Lining: 100% polyester"
+],
+"image": ["/img/Jacket3.png",
+"/img/Jacket3_1.png",
+"/img/Jacket3_2.png",
+"/img/Jacket3_3.png"
+]
+},{
+"id": 35,
+"name": "CROPPED FUR-EFFECT JACKET",
+"price": "$39.60",
+"color": "Dark brown",
+"sizes": ["XS", "S", "M", "L", "XL"],
+"description": "Cropped jacket in soft faux fur fabric. Loose-fitting style with collar and hidden snap closure at the neck and front. Lined.",
+"materials": [
+"Lining: 52.0% polyester, 48.0% viscose"
+],
+"image": ["/img/Jacket4.png",
+"/img/Jacket4_1.png",
+"/img/Jacket4_2.png",
+"/img/Jacket4_3.png"
+]
+},{
+"id": 36,
+"name": "LOOSE FIT DENIM HOODED JACKET",
+"price": "$63.38",
+"color": "Dark denim blue",
+"sizes": ["XS", "S", "M", "L", "XL"],
+"description": "Stiff cotton denim jacket with cotton-lined hood. Model with zipper closure and cuffs with opening and metal button. Open front pockets and piped pocket with snap button inside. Loose fit for a wide but not oversized silhouette. Lined.",
+"materials": [
+"100% cotton"
+],
+"image": ["/img/Jacket5.png",
+"/img/Jacket5_1.png",
+"/img/Jacket5_2.png",
+"/img/Jacket5_3.png"]
+},{
+"id": 37,
+"name": "SEQUIN JACKET WITH KNOTTED DETAIL",
+"price": "$39.60",
+"color": "Cream/Black",
+"sizes": ["XS", "S", "M", "L", "XL"],
+"description": "Sequin-covered mesh jacket with a round neckline and wide satin ties to knot at the front. Lined.",
+"materials": [
+"Lining: 96.0% polyester, 4.0% elastane"
+],
+"image": ["/img/Jacket6.png",
+"/img/Jacket6_1.png",
+"/img/Jacket6_2.png",
+"/img/Jacket6_3.png"]
+},{
+"id": 38,
+"name": "COAT JACKET",
+"price": "$52.81",
+"color": "Light beige",
+"sizes": ["XS", "S", "M", "L", "XL"],
+"description": "Soft faux fur jacket with coated details. Round neckline, front button closure, and piped side pockets. Lined.",
+"materials": [
+"Lining: 100% polyester"
+],
+"image": ["/img/Jacket7.png",
+"/img/Jacket7_1.png",
+"/img/Jacket7_2.png",
+"/img/Jacket7_3.png"]
+},{
+"id": 39,
+"name": "TWILL JACKET WITH FUR-EFFECT COLLAR",
+"price": "$52.81",
+"color": "Light beige/Brown/Gray",
+"sizes": ["XS", "S", "M", "L", "XL"],
+"description": "Twill jacket with a brushed finish. Loose-fitting style with a removable fur-effect collar, button front closure, and yoke detail at the back. Dropped shoulders, buttoned cuffs, and front pockets with flaps and buttons. Lined.",
+"materials": [
+"Lining: 100% polyester"
+],
+"image": ["/img/Jacket8.png",
+"/img/Jacket8_1.png",
+"/img/Jacket8_2.png",
+"/img/Jacket8_3.png"]
+},{
+"id": 40,
+"name": "LOOSE FIT DENIM JACKET",
+"price": "$73.95",
+"color": " Blue-beige denim",
+"sizes": ["XS", "S", "M", "L", "XL"],
+"description": "Stiff cotton denim jacket with collar, front closure with metal buttons, and yoke at the front and back. Chest pockets with flap and button, and piped side pockets. Buttoned cuffs and adjustable tab with buttons at the sides of the hem. Loose fit for a wide but not oversized silhouette. Lined.",
+"materials": [
+"Interlining: 100% polyester"
+],
+"image": ["/img/Jacket9.png",
+"/img/Jacket9_1.png",
+"/img/Jacket9_2.png",
+"/img/Jacket9_3.png"]
+},{
+"id": 41,
+"name": "JEANS BAGGY",
+"price": "$47.53",
+"color": " Dark beige",
+"sizes": ["XS", "S", "M", "L", "XL"],
+"description": "Five-pocket jeans in stiff cotton denim. Baggy fit from hip to hem with wide, rounded legs and darts at the knees for added volume. Mid-rise with zipper closure, drop crotch, and pleats at the ankle.",
+"materials": [
+"Pocket lining: 100% cotton"
+],
+"image": ["/img/Jean1.png",
+"/img/Jean1_1.png",
+"/img/Jean1_2.png",
+"/img/Jean1_3.png"]
+},{
+"id": 42,
+"name": "JEANS WITH GLITTER",
+"price": "$52.81",
+"color": "Dark denim blue",
+"sizes": ["XS", "S", "M", "L", "XL"],
+"description": "Five-pocket jeans in rigid denim with metallic threads for a shiny finish. High-waisted style with straight legs, zipper closure with button, and pressed crease line at the front and back.",
+"materials": [
+"Outer fabric: 83.0% cotton, 12.0% polyester, 5.0% metallic fiber"
+],
+"image": ["/img/Jean2.png",
+"/img/Jean2_1.png",
+"/img/Jean2_2.png",
+"/img/Jean2_3.png"]
+},{
+"id": 43,
+"name": "BAGGY JEANS",
+"price": "$36.81",
+"color": "Pale denim blue",
+"sizes": ["XS", "S", "M", "L", "XL"],
+"description": "Five-pocket jeans in stiff cotton denim. Loose fit from hips to hem with extra-wide rounded legs and ankle pleats. Mid-rise with zipper closure and low crotch. Perfection in denim.",
+"materials": [
+"Pocket lining: 75.0% polyester, 25.0% cotton"
+],
+"image": ["/img/Jean3.png",
+"/img/Jean3_1.png",
+"/img/Jean3_2.png",
+"/img/Jean3_3.png"]
+},{
+"id": 44,
+"name": "NORMAL JEANS",
+"price": "$36.81",
+"color": "Gray",
+"sizes": ["XS", "S", "M", "L", "XL"],
+"description": "Five-pocket jeans in stiff cotton denim. Loose fit from hips to hem with extra-wide rounded legs and ankle pleats. Mid-rise with zipper closure and low crotch. Perfection in denim.",
+"materials": [
+"Pocket lining: 54.0% polyester, 46.0% cotton"
+],
+"image": ["/img/Jean4.png",
+"/img/Jean4_1.png",
+"/img/Jean4_2.png",
+"/img/Jean4_3.png"]
+},{
+"id": 45,
+"name": "SLIM FIT MOM HIGH ANKLE JEANS",
+"price": "$36.81",
+"color": "Black",
+"sizes": ["XS", "S", "M", "L", "XL"],
+"description": "Five-pocket ankle-length jeans in denim with a slight stretch for optimal comfort. Straight-leg style with a fitted high waist and zipper closure with button. Standard fit from hip to thigh, slightly more fitted at the bottom. The pair you'll never tire of.",
+"materials": [
+"Outer fabric: 99.0% cotton, 1.0% elastane"
+],
+"image": ["/img/Jean5.png",
+"/img/Jean5_1.png",
+"/img/Jean5_2.png",
+"/img/Jean5_3.png"]
+},{
+"id": 46,
+"name": "STRAIGH HIGH JEANS",
+"price": "$32.81",
+"color": "Light denim blue",
+"sizes": ["XS", "S", "M", "L", "XL"],
+"description": "Five-pocket jeans in stiff denim that softens with time and wear. Standard fit from waist to hip and slightly loose straight cut from hip to hem. High-rise model with zipper closure with button and long straight legs. Designed to be worn with the hem stacked. A classic cut that goes with everything. Hoodie or blazer? You decide.",
+"materials": [
+"Cotton 81.0%, Polyester 19.0%"
+],
+"image": ["/img/Jean6.png",
+"/img/Jean6_1.png",
+"/img/Jean6_2.png",
+"/img/Jean6_3.png"]
+},{
+"id": 47,
+"name": "STRAIGHT REGULAR JEANS",
+"price": "$50.81",
+"color": "Denim blue",
+"sizes": ["XS", "S", "M", "L", "XL"],
+"description": "Five-pocket jeans in cotton denim with a slight stretch for optimal comfort. Mid-rise model with zipper closure. Standard cut from waist to hem with slightly loose straight legs. Denim for the long haul.",
+"materials": [
+"Cotton 99.0%, Elastane 1.0%"
+],
+"image": ["/img/Jean7.png",
+"/img/Jean7_1.png",
+"/img/Jean7_2.png",
+"/img/Jean7_3.png"]
+},{
+"id": 48,
+"name": "WIDE HIGH JEANS",
+"price": "$48.91",
+"color": "White",
+"sizes": ["XS", "S", "M", "L", "XL"],
+"description": "Rigid cotton denim jeans that soften with time and wear. Wide legs with a standard cut from waist to hip and a loose fit from thigh to hem. High-rise model with a break line, zipper closure with button, slanted side pockets, and decorative piped back pockets. Slightly long style, designed to be worn with the hem stacked over the instep. A denim fashion statement that never fails.",
+"materials": [
+"Outer fabric: 100% cotton"
+],
+"image": ["/img/Jean8.png",
+"/img/Jean8_1.png",
+"/img/Jean8_2.png",
+"/img/Jean8_3.png"]
+},{
+"id":49 ,
+"name": "BAGGY JEANS",
+"price": "$46.91",
+"color": "Denim green",
+"sizes": ["XS", "S", "M", "L", "XL"],
+"description": "Five-pocket jeans in stiff cotton denim. Loose fit from hip to hem with baggy legs and pleats at the ankle. Mid-rise, zipper closure, and drop crotch. Perfection in denim.",
+"materials": [
+"Pocket lining: 65.0% polyester, 35.0% cotton"
+],
+"image": ["/img/Jean9.png",
+"/img/Jean9_1.png",
+"/img/Jean9_2.png",
+"/img/Jean9_3.png"]
+},{
+"id": 50 ,
+"name": "REGULAR OXFORD SHIRT FIT",
+"price": "$22.91",
+"color": "Black",
+"sizes": ["XS", "S", "M", "L", "XL"],
+"description": "Oxford cotton shirt with American collar, classic placket, chest pocket, and yoke on the back. Long sleeves with buttoned cuffs and buttoned placket. Slightly rounded hem. Standard fit for a classic and comfortable silhouette.",
+"materials": [
+"100% cotton"
+],
+"image": ["/img/Shirt1.png",
+"/img/Shirt1_1.png",
+"/img/Shirt1_2.png",
+"/img/Shirt1_3.png"]
+},{
+"id": 51 ,
+"name": "OVERSIZED COTTON SHIRT",
+"price": "$21.42",
+"color": "Light beige/Dark brown",
+"sizes": ["XS", "S", "M", "L", "XL"],
+"description": "Oversized shirt in lightweight cotton fabric with a classic collar, button-through front, and fan-pleated yoke at the back. Long sleeves with dropped shoulders, patch pocket on the chest, buttoned cuffs, and rounded hem. Slightly longer at the back.",
+"materials": [
+"100% cotton"
+],
+"image": ["/img/Shirt2.png",
+"/img/Shirt2_1.png",
+"/img/Shirt2_2.png",
+"/img/Shirt2_3.png"]
+},{
+"id": 52 ,
+"name": "EASY-IRON SLIM FIT SHIRT",
+"price": "$19.48",
+"color": "White",
+"sizes": ["XS", "S", "M", "L", "XL"],
+"description": "Easy-iron fabric shirt. Model with English collar, classic placket, and yoke on the back. Long sleeves with buttoned cuffs and adjustable button closure. Slightly rounded hem. Slim fit that enhances the body's contours, creating a fitted silhouette.",
+"materials": [
+"Polyester 65.0%, Cotton 35.0%"
+],
+"image": ["/img/Shirt3.png",
+"/img/Shirt3_1.png",
+"/img/Shirt3_2.png",
+"/img/Shirt3_3.png"]
+},{
+"id": 53,
+"name": "OXFORD SHIRT",
+"price": "$23.92",
+"color": "Blue/White",
+"sizes": ["XS", "S", "M", "L", "XL"],
+"description": "Washed cotton Oxford shirt with classic collar, button closure at the front, and yoke with belt loops at the back. Relaxed fit with dropped shoulders and long sleeves with buttoned cuffs. Rounded hem with slightly longer back.",
+"materials": [
+"100% cotton"
+],
+"image": ["/img/Shirt4.png",
+"/img/Shirt4_1.png",
+"/img/Shirt4_2.png",
+"/img/Shirt4_3.png"]
+},{
+"id": 54 ,
+"name": "OVERSIZED FIT LINEN BLEND SHIRT",
+"price": "$28.32",
+"color": "Black/White/Orange",
+"sizes": ["XS", "S", "M", "L", "XL"],
+"description": "Short-sleeved shirt in a lightweight linen and cotton blend. Features a spread collar, classic placket, chest pocket, and straight hem. Oversized fit for a baggy, extra-loose silhouette. The linen and cotton blend combines the softness of cotton with the stiffness of linen to create a textured, breathable fabric with a beautiful drape.",
+"materials": [
+"Cotton 75.0%, Linen 25.0%"
+],
+"image": ["/img/Shirt5.png",
+"/img/Shirt5_1.png",
+"/img/Shirt5_2.png",
+"/img/Shirt5_3.png"]
+},{
+"id": 55,
+"name": "LOOSE FIT SHIRT IN LUMBERJACK FABRIC",
+"price": "$27.56",
+"color": "Plum purple/White",
+"sizes": ["XS", "S", "M", "L", "XL"],
+"description": "Soft lumberjack fabric shirt with an English collar, smooth placket, and yoke on the back. Long-sleeved model with buttoned cuffs, chest pocket, and slightly rounded hem. Loose fit for a wide silhouette without being oversized.",
+"materials": [
+"Cotton 60.0%, Polyester 40.0%"
+],
+"image": ["/img/Shirt6.png",
+"/img/Shirt6_1.png",
+"/img/Shirt6_2.png",
+"/img/Shirt6_3.png"]
+},{
+"id":56 ,
+"name": "REGULAR FIT RERSORT SHIRT WITH TEXTURE",
+"price": "$27.56",
+"color": "White/Red",
+"sizes": ["XS", "S", "M", "L", "XL"],
+"description": "Short-sleeved shirt in textured fabric. Printed design with resort collar, plain placket, and straight hem. Standard fit for a classic, comfortable silhouette.",
+"materials": [
+"Viscose 83.0%, Polyamide 17.0%"
+],
+"image": ["/img/Shirt7.png",
+"/img/Shirt7_1.png",
+"/img/Shirt7_2.png",
+"/img/Shirt7_3.png"]
+},{
+"id": 57,
+"name": "REULAR FIT RESORT SHIRT IN KNIT FABRIC",
+"price": "$23.87",
+"color": "White",
+"sizes": ["XS", "S", "M", "L", "XL"],
+"description": "Short-sleeved shirt in medium-weight textured cotton blend knit. Model with resort collar, smooth placket, and straight hem. Standard cut for a classic and comfortable silhouette.",
+"materials": [
+"Cotton 60.0%, Polyester 40.0%"
+],
+"image": ["/img/Shirt8.png",
+"/img/Shirt8_1.png",
+"/img/Shirt8_2.png",
+"/img/Shirt8_3.png"]
+},{
+"id": 58,
+"name": "STRIPED SHIRT",
+"price": "$25.47",
+"color": "Navy blue/White",
+"sizes": ["XS", "S", "M", "L", "XL"],
+"description": "Shirt with collar, front button closure, and box pleat yoke at the back. Long-sleeved style with buttoned cuffs and buttoned placket. Rounded hem.",
+"materials": [
+"100% polyester"
+],
+"image": ["/img/Shirt9.png",
+"/img/Shirt9_1.png",
+"/img/Shirt9_2.png",
+"/img/Shirt9_3.png"]
+},{
+"id": 59 ,
+"name": "LOOSE FIT T-SHIRT",
+"price": "$18.91",
+"color": "Plum",
+"sizes": ["XS", "S", "M", "L", "XL"],
+"description": "Heavyweight cotton knit T-shirt. Crew neck with ribbed trim, dropped shoulders, and straight hem. Loose fit for a relaxed silhouette without being oversized.",
+"materials": [
+"Ribbed: 95.0% cotton, 5.0% elastane"
+],
+"image": ["/img/T-Shirt1.png",
+"/img/T-Shirt1_1.png",
+"/img/T-Shirt1_2.png",
+"/img/T-Shirt1_3.png"]
+},{
+"id": 60,
+"name": "OVERSIZED T-SHIRT WITH PRINTED PATTERN",
+"price": "$18.34",
+"color": "Dark gray/Red/White",
+"sizes": ["XS", "S", "M", "L", "XL"],
+"description": "Printed cotton jersey T-shirt. Oversized short-sleeved style with dropped shoulders and a ribbed round neckline.",
+"materials": [
+"100% cotton"
+],
+"image": ["/img/T-Shirt2.png",
+"/img/T-Shirt2_1.png",
+"/img/T-Shirt2_2.png",
+"/img/T-Shirt2_3.png"]
+},{
+"id":61 ,
+"name": "LOOSE FIT T-SHIRT WITH PRINTED MOTIF",
+"price": "$19.34",
+"color": "White/Yellow/Green",
+"sizes": ["XS", "S", "M", "L", "XL"],
+"description": "Medium-weight cotton knit T-shirt with printed motif. Round neckline with ribbed trim and dropped shoulders. Loose fit for a relaxed silhouette without being oversized.",
+"materials": [
+"100% cotton"
+],
+"image": ["/img/T-Shirt3.png",
+"/img/T-Shirt3_1.png",
+"/img/T-Shirt3_2.png",
+"/img/T-Shirt3_3.png"]
+},{
+"id": 62 ,
+"name": "REGULAR FIT T-SHIRT",
+"price": "$12.64",
+"color": "Black",
+"sizes": ["XS", "S", "M", "L", "XL"],
+"description": "Lightweight cotton knit T-shirt with a ribbed round neckline and straight hem. Standard fit for a classic, comfortable silhouette.",
+"materials": [
+"100% cotton"
+],
+"image": ["/img/T-Shirt4.png",
+"/img/T-Shirt4_1.png",
+"/img/T-Shirt4_2.png",
+"/img/T-Shirt4_3.png"]
+},{
+"id": 63,
+"name": "OVERSIZED FIT T-SHIRT",
+"price": "$18.32",
+"color": "Black/White/Orange",
+"sizes": ["XS", "S", "M", "L", "XL"],
+"description": "Short-sleeved shirt in a lightweight linen and cotton blend. Features a spread collar, classic placket, chest pocket, and straight hem.",
+"materials": [
+"Cotton 75.0%, Linen 25.0%"
+],
+"image": ["/img/T-Shirt5.png",
+"/img/T-Shirt5_1.png",
+"/img/T-Shirt5_2.png",
+"/img/T-Shirt5_3.png"]
+},{
+"id": 64,
+"name": "MICROFIBER T-SHIRT",
+"price": "$9.64",
+"color": "Dark blue",
+"sizes": ["XS", "S", "M", "L", "XL"],
+"description": "Soft microfiber T-shirt. Fitted style with round neck and straight hem.",
+"materials": [
+"100% cotton"
+],
+"image": ["/img/T-Shirt6.png",
+"/img/T-Shirt6_1.png",
+"/img/T-Shirt6_2.png",
+"/img/T-Shirt6_3.png"]
+},{
+"id": 65,
+"name": "REGULAR FIT RESORT T-SHIRT",
+"price": "$17.56",
+"color": "White/Red",
+"sizes": ["XS", "S", "M", "L", "XL"],
+"description": "Short-sleeved shirt in textured fabric. Printed design with resort collar, plain placket, and straight hem. ",
+"materials": [
+"Viscose 83.0%, Polyamide 17.0%"
+],
+"image": ["/img/T-Shirt7.png",
+"/img/T-Shirt7_1.png",
+"/img/T-Shirt7_2.png",
+"/img/T-Shirt7_3.png"]
+},{
+"id": 67,
+"name": "REGULAR FIT RESORT T-SHIRT",
+"price": "$20.87",
+"color": "White",
+"sizes": ["XS", "S", "M", "L", "XL"],
+"description": "Short-sleeved shirt in medium-weight textured cotton blend knit. Model with resort collar, smooth placket, and straight hem. ",
+"materials": [
+"Cotton 60.0%, Polyester 40.0%"
+],
+"image": ["/img/T-Shirt8.png",
+"/img/T-Shirt8_1.png",
+"/img/T-Shirt8_2.png",
+"/img/T-Shirt8_3.png"]
+},{
+"id": 68,
+"name": "DRAPED T-SHIRT",
+"price": "$11.34",
+"color": "Red",
+"sizes": ["XS", "S", "M", "L", "XL"],
+"description": "Fitted T-shirt in soft knit fabric. Model with Japanese sleeves and gathered sides to create a slight draped effect.",
+"materials": [
+"100% cotton"
+],
+"image": ["/img/T-Shirt9.png",
+"/img/T-Shirt9_1.png",
+"/img/T-Shirt9_2.png",
+"/img/T-Shirt9_3.png"]
+},{
+"id": 69,
+"name": "REGULAR FIT FLANNEL SHORTS",
+"price": "$10.34",
+"color": "Peach pink",
+"sizes": ["XS", "S", "M", "L", "XL"],
+"description": "Lightweight cotton blend flannel shorts. Model with elastic waistband and drawstring, side pockets, and one back pocket. Standard fit for a classic, comfortable silhouette.",
+"materials": [
+"100% cotton"
+],
+"image": ["/img/Short1.png",
+"/img/Short1_1.png",
+"/img/Short1_2.png",
+"/img/Short1_3.png"]
+},{
+"id": 70 ,
+"name": "BERMUDA DENIM BALLOON",
+"price": "$47.29",
+"color": "Light blue",
+"sizes": ["XS", "S", "M", "L", "XL"],
+"description": "These oversized denim shorts are the perfect blend of comfort and attitude. With a wide cut to the knee and mid-rise, they offer freedom of movement and a relaxed look that's ideal for everyday wear. The metal keyring detail on the belt loop adds an urban, personalized touch that makes them stand out. Pair them with crop tops, sweatshirts, or graphic tees for a casual style with plenty of personality.",
+"materials": [
+"100% cotton"
+],
+"image": ["/img/Short2.png",
+"/img/Short2_1.png",
+"/img/Short2_2.png",
+"/img/Short2_3.png"]
+},{
+"id": 71,
+"name": "REGULAR FIT CANVAS SHORTS",
+"price": "$22.19",
+"color": "Navy blue",
+"sizes": ["XS", "S", "M", "L", "XL"],
+"description": "Cotton canvas shorts. Style with decorative closure, elastic waistband with drawstring, side pockets, and a welt back pocket. Regular fit for a classic, comfortable silhouette.",
+"materials": [
+"Pocket lining: 65.0% cotton, 35.0% polyester"
+],
+"image": ["/img/Short3.png",
+"/img/Short3_1.png",
+"/img/Short3_2.png",
+"/img/Short3_3.png"]
+},{
+"id": 72,
+"name": "SHORTS DENIM ROLL UP",
+"price": "$26.08",
+"color": "Blue",
+"sizes": ["XS", "S", "M", "L", "XL"],
+"description": "These denim shorts combine classic style with modern details that make them irresistible. Their slim fit enhances your figure without sacrificing comfort, while the rolled hem gives them a casual, carefree touch. The back pockets are strategically placed to add structure and style. Ideal for boho, urban, or summer looks, they easily adapt to your personal style.",
+"materials": [
+"Pocket lining: 65.0% cotton, 35.0% polyester"
+],
+"image": ["/img/Short4.png",
+"/img/Short4_1.png",
+"/img/Short4_2.png",
+"/img/Short4_3.png"]
+},{
+"id": 73,
+"name": "DOUBLE-LAYER DRYMOVE™️ RUNNING SHORTS",
+"price": "$19.38",
+"color": "Black",
+"sizes": ["XS", "S", "M", "L", "XL"],
+"description": "Running shorts made from functional fabric with DryMove™️ technology that helps absorb sweat and keep you cool for greater comfort when exercising. Model with elastic waistband, hidden drawstring, and short slit at the hem. Cycling shorts underneath with open pocket on one leg. Made from knit fabric.",
+"materials": [
+"Inner layer: 77.0% polyester, 23.0% elastane"
+],
+"image": ["/img/Short5.png",
+"/img/Short5_1.png",
+"/img/Short5_2.png",
+"/img/Short5_3.png"]
+},{
+"id": 74,
+"name": "EMBOSSED RUFFLE SHORTS",
+"price": "$25.38",
+"color": "White",
+"sizes": ["XS", "S", "M", "L", "XL"],
+"description": "Designed to highlight your style with elegance and freshness, these high-waisted white shorts combine a fitted silhouette with a crinkled texture that adds character and originality. Their lightweight, stretchy fabric gently hugs the body, creating a flattering and comfortable look. Perfect for pairing with the matching crop top or mixing with other pieces for a versatile and chic outfit.",
+"materials": [
+"Inner layer: 2% polyester, 98% elastane"
+],
+"image": ["/img/Short6.png",
+"/img/Short6_1.png",
+"/img/Short6_2.png",
+"/img/Short6_3.png"]
+},{
+"id": 75,
+"name": "VISCOSE SHORTS WITH GATHERS",
+"price": "$13.58",
+"color": "Black",
+"sizes": ["XS", "S", "M", "L", "XL"],
+"description": "Shorts in fine ribbed viscose knit. Style with wide waistband and gathered side seams that create a draped effect.",
+"materials": [
+"Viscose 92.0%, Elastane 8.0%"
+],
+"image": ["/img/Short7.png",
+"/img/Short7_1.png",
+"/img/Short7_2.png",
+"/img/Short7_3.png"]
+},{
+"id":76 ,
+"name": "MINI SEQUIN SHORTS",
+"price": "$27.58",
+"color": "Brown",
+"sizes": ["XS", "S", "M", "L", "XL"],
+"description": "Shine with attitude. These black sequined shorts are a style statement: bold, elegant, and perfect for unforgettable nights out. Their slim fit flatters the figure, while the subtle sparkle of the sequins adds texture and movement. ",
+"materials": [
+"100% polyester"
+],
+"image": ["/img/Short8.png",
+"/img/Short8_1.png",
+"/img/Short8_2.png",
+"/img/Short8_3.png"]
+},{
+"id": 77,
+"name": "WNBA DENIM SKATER SHORTS ",
+"price": "$52.07",
+"color": "Blue",
+"sizes": ["XS", "S", "M", "L", "XL"],
+"description": "These denim shorts with thin stripes and graphic embroidery are pure street style. Their loose Bermuda cut and embroidered details on both legs make them a unique piece, ideal for those who want to stand out effortlessly. Perfect for pairing with T-shirts, varsity jackets, or eye-catching sneakers, this garment speaks of attitude, movement, and authenticity.",
+"materials": ["99% cotton,1% elastane"
+],
+"image": ["/img/Short9.png",
+"/img/Short9_1.png",
+"/img/Short9_2.png",
+"/img/Short9_3.png"]
+}
 ]
 

@@ -24,23 +24,27 @@ function ProductDetailPage({
   return (
     <section className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 lg:grid-cols-2 gap-10">
       {/* LEFT - Images */}
-      <div className="flex flex-col gap-4">
-        <img
-          src={images[0]}
-          alt={name}
-          className="rounded-lg object-cover w-full"
-        />
-        <div className="grid grid-cols-3 gap-4">
-          {images.slice(1).map((img, i) => (
-            <img
-              key={i}
-              src={img}
-              alt={`view-${i}`}
-              className="rounded-lg object-cover"
-            />
-          ))}
-        </div>
-      </div>
+<div className="flex flex-col gap-3">
+  {/* Imagen principal */}
+  <img
+    src={images[0]}
+    alt={name}
+    className="rounded-lg object-cover w-full aspect-[2/3]"
+  />
+
+  {/* Dos imágenes más pequeñas abajo */}
+  <div className="grid grid-cols-2 gap-3">
+    {images.slice(1, 3).map((img, i) => (
+      <img
+        key={i}
+        src={img}
+        alt={`${name}-${i}`}
+        className="rounded-lg object-cover w-full aspect-[2/3]"
+      />
+    ))}
+  </div>
+</div>
+
 
       {/* RIGHT - Info */}
       <div className="flex flex-col justify-start">
