@@ -41,7 +41,6 @@ const Categories = () => {
           </div>
         </div>
 
-        {/* JACKETS */}
         <div className="relative group overflow-hidden rounded-3xl cursor-pointer">
           <NavLink to="/jackets">
             <img
@@ -57,7 +56,6 @@ const Categories = () => {
           </div>
         </div>
 
-        {/* JEANS */}
         <div className="relative group overflow-hidden rounded-3xl cursor-pointer">
           <NavLink to="/jeans">
             <img
@@ -73,7 +71,6 @@ const Categories = () => {
           </div>
         </div>
 
-        {/* SHIRTS */}
         <div className="relative group overflow-hidden rounded-3xl cursor-pointer">
           <NavLink to="/shirts">
             <img
@@ -89,7 +86,6 @@ const Categories = () => {
           </div>
         </div>
 
-        {/* T-SHIRTS */}
         <div className="relative group overflow-hidden rounded-3xl cursor-pointer">
           <NavLink to="/t-shirts">
             <img
@@ -105,7 +101,6 @@ const Categories = () => {
           </div>
         </div>
 
-        {/* BERMUDA SHORTS */}
         <div className="relative group overflow-hidden rounded-3xl cursor-pointer">
           <NavLink to="/bermudas">
             <img
@@ -121,7 +116,6 @@ const Categories = () => {
           </div>
         </div>
 
-        {/* SWEATERS */}
         <div className="relative group overflow-hidden rounded-3xl cursor-pointer">
           <NavLink to="/sweaters">
             <img
