@@ -16,6 +16,7 @@ import LoginPage from './pages/LoginPage.tsx'
 import Register from './components/RegisterBtn.tsx'
 import RegisterPage from './pages/RegisterPage.tsx'
 import WomanPage from './pages/WomanPage.tsx'
+import JacketsPage from './pages/JacketsPage.tsx'
 
 
 const Routes= createBrowserRouter([{
@@ -66,6 +67,9 @@ const Routes= createBrowserRouter([{
 },{
   path:"/woman",
   element: <WomanPage/>
+},{
+  path:"/jackets",
+  element: <JacketsPage/>
 }])
 
 createRoot(document.getElementById('root')!).render(
