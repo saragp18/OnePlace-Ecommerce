@@ -5,7 +5,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import { store } from './redux/store'
 
-// Páginas
+
 import Home from './pages/home.tsx'
 import Moresellspage from './pages/Moresellspage.tsx'
 import NewPage from './pages/newPage.tsx'
