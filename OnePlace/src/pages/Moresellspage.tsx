@@ -9,7 +9,7 @@ function Moresellspage() {
     <div>
         <Navbar />
         <HeroMoresells/>
-        <ProductsMoresells />
+        <ProductsMoresells/>
         <Footer/>
 
     </div>

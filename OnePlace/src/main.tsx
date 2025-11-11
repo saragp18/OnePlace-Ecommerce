@@ -37,7 +37,7 @@ const Routes= createBrowserRouter([{
   element: <Moresellspage/>
 },{
   path:"/sell",
-  element: < AddProduct/>
+  element: <AddProduct/>
 },{
   path:"/collection",
   element: <h2> Collection page</h2>
