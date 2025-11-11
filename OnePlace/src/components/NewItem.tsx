@@ -18,7 +18,7 @@ const NewItemsSection = () => {
             className="bg-gray-100 rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow duration-300"
           >
             <img
-              src={item.image}
+              src={item.image[0]}
               alt={item.name}
               className="w-full h-72 object-cover rounded-md mb-4"
             />

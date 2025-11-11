@@ -294,6 +294,48 @@
   },
   {
     "id": 22,
+    "name": "Regular button-up vest",
+    "price": "$45.00",
+    "color": "White",
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "description": "Soft cotton T-shirt with regular fit and round neckline.",
+    "materials": [
+      "100% cotton",
+      "Machine wash warm",
+      "Do not tumble dry"
+    ],
+    "image": ["/img/Tshirts.png"]
+  },
+  {
+    "id": 23,
+    "name": "Button-down top",
+    "price": "$35.00",
+    "color": "BLUE",
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "description": "Soft cotton T-shirt with regular fit and round neckline.",
+    "materials": [
+      "100% cotton",
+      "Machine wash warm",
+      "Do not tumble dry"
+    ],
+    "image": ["/img/MoreProduct9.png"]
+  },
+  {
+    "id": 24,
+    "name": "FORMAL PANTS",
+    "price": "$60.00",
+    "color": "RED",
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "description": "Soft cotton T-shirt with regular fit and round neckline.",
+    "materials": [
+      "100% cotton",
+      "Machine wash warm",
+      "Do not tumble dry"
+    ],
+    "image": ["/img/MoreProduct10.png"]
+  },
+  {
+    "id": 25,
     "name": "T-SHIRTS",
     "price": "$35.00",
     "color": "White",
@@ -304,6 +346,91 @@
       "Machine wash warm",
       "Do not tumble dry"
     ],
-    "image": ["/img/Tshirts.png"]
+    "image": ["/img/MoreProduct11.png"]
+  },
+  {
+    "id": 26,
+    "name": "BLACK T-SHIRTS",
+    "price": "$35.00",
+    "color": "BLACK",
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "description": "Soft cotton T-shirt with regular fit and round neckline.",
+    "materials": [
+      "100% cotton",
+      "Machine wash warm",
+      "Do not tumble dry"
+    ],
+    "image": ["/img/MoreProduct12.png"]
+  },
+  {
+    "id": 27,
+    "name": "BASIC HOODIE",
+    "price": "$50.00",
+    "color": "White",
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "description": "Soft cotton T-shirt with regular fit and round neckline.",
+    "materials": [
+      "100% cotton",
+      "Machine wash warm",
+      "Do not tumble dry"
+    ],
+    "image": ["/img/MoreProduct13.png"]
+  },
+  {
+    "id": 28,
+    "name": "BLUE JEAN",
+    "price": "$65.00",
+    "color": "BLUE DENIM",
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "description": "Soft cotton T-shirt with regular fit and round neckline.",
+    "materials": [
+      "100% cotton",
+      "Machine wash warm",
+      "Do not tumble dry"
+    ],
+    "image": ["/img/MoreProduct14.png"]
+  },
+  {
+    "id": 29,
+    "name": "MANDALA BLOUSE",
+    "price": "$25.00",
+    "color": "White",
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "description": "Soft cotton T-shirt with regular fit and round neckline.",
+    "materials": [
+      "100% cotton",
+      "Machine wash warm",
+      "Do not tumble dry"
+    ],
+    "image": ["/img/MoreProduct15.png"]
+  },
+  {
+    "id": 30,
+    "name": "DENIM SHORTS",
+    "price": "$50.00",
+    "color": "DENIM",
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "description": "Soft cotton T-shirt with regular fit and round neckline.",
+    "materials": [
+      "100% cotton",
+      "Machine wash warm",
+      "Do not tumble dry"
+    ],
+    "image": ["/img/MoreProduct16.png"]
+  },
+  {
+    "id": 31,
+    "name": "WHITE T-SHIRT",
+    "price": "$35.00",
+    "color": "White",
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "description": "Soft cotton T-shirt with regular fit and round neckline.",
+    "materials": [
+      "100% cotton",
+      "Machine wash warm",
+      "Do not tumble dry"
+    ],
+    "image": ["/img/MoreProduct17.png"]
   }
 ]
+
