@@ -23,7 +23,7 @@ console.log(items);
             >
               <div className="flex items-center gap-4">
                 <img
-                  src={item.image}
+                  src={item.image[0]}
                   alt={item.name}
                   className="w-20 h-20 object-cover rounded"
                 />

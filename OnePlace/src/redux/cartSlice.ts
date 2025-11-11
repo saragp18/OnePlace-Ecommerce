@@ -16,13 +16,9 @@ interface CartState {
 
 const initialState: CartState = {
   items: [
-    {
-    id: 1,
-    name: "Basic Hoodie",
-    price: 50,
-    image: "https://your-image-link.jpg",
-    color: "White",
-  }
+  
+    
+  
   ],
 };
 
