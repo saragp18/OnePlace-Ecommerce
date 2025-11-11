@@ -9,7 +9,7 @@ const Categories = () => {
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 px-8 max-w-6xl mx-auto">
-        {/* WOMEN */}
+        
         <div className="relative group overflow-hidden rounded-3xl cursor-pointer">
           <NavLink to="/women">
             <img

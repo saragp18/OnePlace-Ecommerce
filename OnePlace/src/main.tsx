@@ -3,6 +3,9 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Home from './pages/home.tsx'
+import Moresellspage from './pages/Moresellspage.tsx'
+import DetailProductPage from './pages/DetailProductPage.tsx'
+
 import NewPage from './pages/newPage.tsx'
 
 import CategoriesPage from './pages/categoriesPage.tsx'
@@ -32,7 +35,7 @@ const Routes= createBrowserRouter([{
   element: <CategoriesPage />
 },{
   path:"/moresells",
-  element: <h2> More Sells page</h2>
+  element: <Moresellspage/>
 },{
   path:"/sell",
   element: < AddProduct/>
