@@ -4,7 +4,6 @@ import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Home from './pages/home.tsx'
 import Moresellspage from './pages/Moresellspage.tsx'
-import DetailProductPage from './pages/DetailProductPage.tsx'
 
 import NewPage from './pages/newPage.tsx'
 
