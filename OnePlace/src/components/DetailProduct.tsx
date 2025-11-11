@@ -29,7 +29,7 @@ const DetailProduct = () => {
 
   return (
     <div className="flex flex-col md:flex-row justify-between gap-8 p-8">
-      {/* Imagen */}
+      
       <div className="flex-1">
         <img
           src={product.image}
@@ -38,7 +38,7 @@ const DetailProduct = () => {
         />
       </div>
 
-      {/* Info */}
+     
       <div className="flex-1 flex flex-col gap-4">
         <h1 className="text-3xl font-bold">{product.name}</h1>
         <p className="text-lg">Color: {product.color}</p>
