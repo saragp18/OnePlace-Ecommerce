@@ -1,5 +1,3 @@
-import React from "react";
-
 function CategoryMenu() {
   return (
     <div className="bg-gray-100 p-4 rounded-xl grid grid-cols-2 gap-2">

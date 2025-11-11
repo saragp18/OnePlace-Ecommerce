@@ -1,8 +1,3 @@
-import React from "react";
-
-
-
-
 function Contrasena() {
   return (
     <>

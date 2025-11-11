@@ -20,6 +20,7 @@ import JeanPage from './pages/JeanPage.tsx'
 import ShirtsPage from './pages/ShirtsPage.tsx'
 import TshirtsPage from './pages/TshirtPage.tsx'
 import ShortPage from './pages/ShortPage.tsx'
+import SueterPage from './pages/SueterPage.tsx'
 
 
 const Routes= createBrowserRouter([{
@@ -85,6 +86,9 @@ const Routes= createBrowserRouter([{
 },{
   path:"/bermudas",
   element: <ShortPage/>
+},{
+  path:"/sweaters",
+  element: <SueterPage/>
 }])
 
 createRoot(document.getElementById('root')!).render(

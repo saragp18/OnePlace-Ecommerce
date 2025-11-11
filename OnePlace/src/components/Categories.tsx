@@ -27,7 +27,7 @@ const Categories = () => {
           </NavLink>
 
 
-        {/* MEN */}
+        
         <div className="relative group overflow-hidden rounded-3xl cursor-pointer">
           <NavLink to="/men">
             <img
