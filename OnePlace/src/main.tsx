@@ -10,7 +10,6 @@ import NewPage from './pages/newPage.tsx'
 import CategoriesPage from './pages/categoriesPage.tsx'
 import ManPage from './pages/ManPage.tsx'
 import DetailProduct from './pages/detailProduct.tsx'
-import sellerprofile from './components/sellerprofile.tsx'
 import AddProduct from './pages/AddProductForm.tsx'
 import CommentPage from './pages/CommentPage.tsx'
 import LoginPage from './pages/LoginPage.tsx'
@@ -51,8 +50,11 @@ const Routes= createBrowserRouter([{
   path:"/Product/:id",
   element:<DetailProduct/>
 },{
-  path::"/sellerprofile",
-  element: <sellerprofile />
+  path:"/sellerprofile",
+  element:<h2/>
+},
+
+  {
   path:"/CommentPage",
   element: <CommentPage/>
 }])
