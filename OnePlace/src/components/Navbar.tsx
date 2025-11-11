@@ -26,7 +26,7 @@ function Navbar() {
           text-xs sm:text-sm lg:text-base font-medium text-gray-800
         "
       >
-        <NavLink to={"/"}>
+        <NavLink to="/Home">
           <button className="hover:bg-gray-100 px-2 sm:px-3 py-1 rounded-md transition-colors">
             HOME
           </button>
@@ -59,6 +59,7 @@ function Navbar() {
 
       
       <div className="flex items-center space-x-3 sm:space-x-4">
+         
         <button className="flex items-center space-x-2 hover:bg-gray-100 px-2 sm:px-3 py-1 rounded-md transition-colors">
           <span>Look for</span>
           <img
@@ -75,6 +76,11 @@ function Navbar() {
             className="w-4 h-4 sm:w-5 sm:h-5 object-contain"
           />
         </button>
+        <NavLink to="/">
+        <button className="flex items-center space-x-2 hover:bg-black hover:text-white px-2 sm:px-3 py-1 rounded-md transition-colors cursor-pointer">
+        <span>Login</span>
+        </button>
+      </NavLink>
       </div>
     </header>
   );

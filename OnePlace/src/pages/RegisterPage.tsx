@@ -4,6 +4,7 @@ import EmailTelefono from "../components/EmailTelefono";
 import Contrasena from "../components/Contrasena";
 import Login from "../components/LoginBtn";
 import ContrasenaConfirma from "../components/confirmPassword";
+import { NavLink } from "react-router-dom";
 
 function RegisterPage() {
   return (
@@ -56,18 +57,22 @@ function RegisterPage() {
             <ContrasenaConfirma />
           </div>
 
-         
+         <NavLink to ="/home">
           <button className="w-full bg-black text-white py-3 rounded-2xl text-lg font-medium hover:bg-gray-800 transition mt-4">
             Register
           </button>
+         </NavLink>
 
           
           <p className="text-sm text-gray-600 mt-4 mb-2 text-center">
             Already have an account?
           </p>
-          <div className="flex justify-center">
+          <NavLink to="/">
+            <div className="flex justify-center">
             <Login />
           </div>
+          </NavLink>
+          
         </div>
       </div>
     </div>

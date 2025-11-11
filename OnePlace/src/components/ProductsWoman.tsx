@@ -1,14 +1,14 @@
 import { useNavigate } from "react-router-dom";
 import products from "../data/products.json";
 
-const ProductsMan = () => {
-  const ProductsMan = products.filter((p) => p.id >= 9 && p.id <= 17);
+const ProductsWoman = () => {
+  const ProductsMan = products.filter((p) => p.id >= 83 && p.id <= 91);
   const navigate = useNavigate();
 
   return (
     <section className="max-w-7xl mx-auto px-6 py-12">
       <h2 className="text-3xl font-semibold mb-8 text-left tracking-wider">
-     MEN
+     WOMAN
       </h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8">
@@ -36,4 +36,4 @@ const ProductsMan = () => {
   );
 };
 
-export default ProductsMan;
+export default ProductsWoman;

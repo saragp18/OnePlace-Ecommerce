@@ -9,21 +9,23 @@ const Categories = () => {
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 px-8 max-w-6xl mx-auto">
-        
+         <NavLink to="/woman">
         <div className="relative group overflow-hidden rounded-3xl cursor-pointer">
-          <NavLink to="/women">
+         
             <img
               src="/img/Mujer.jpg"
               alt="WOMEN"
               className="w-full h-[600px] object-cover transition-transform duration-300 group-hover:scale-105"
             />
-          </NavLink>
           <div className="absolute bottom-0 left-0 bg-white px-6 py-3 rounded-tl-2xl rounded-tr-2xl md:rounded-none">
             <p className="text-base md:text-lg font-semibold tracking-widest text-gray-900">
               WOMEN
             </p>
           </div>
         </div>
+
+          </NavLink>
+
 
         {/* MEN */}
         <div className="relative group overflow-hidden rounded-3xl cursor-pointer">

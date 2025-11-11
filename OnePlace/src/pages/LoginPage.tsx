@@ -17,7 +17,7 @@ function LoginPage() {
     const validPassword = "12345";
 
     if (email === validEmail && password === validPassword) {
-      navigate("/Home"); 
+      navigate("/Home");
     } else {
       setError("Incorrect email or password");
     }
@@ -76,15 +76,15 @@ function LoginPage() {
             {error && (
               <p className="text-red-600 text-sm mt-2 text-center">{error}</p>
             )}
-            <NavLink to="/">
 
-            <button
-              type="submit"
-              className="w-full bg-black text-white py-3 rounded-2xl text-lg font-medium hover:bg-gray-800 transition mt-4"
-            >
-              
-              Sign in
-            </button>
+            <NavLink to="/Home">
+              <button
+                type="submit"
+                className="w-full bg-black text-white py-3 rounded-2xl text-lg font-medium hover:bg-gray-800 transition mt-4"
+              >
+
+                Sign in
+              </button>
             </NavLink>
 
           </form>
@@ -92,9 +92,13 @@ function LoginPage() {
           <p className="text-sm text-gray-600 mt-4 mb-2 text-center">
             Don’t have an account?
           </p>
-          <div className="flex justify-center">
-            <Register />
-          </div>
+
+          <NavLink to="/RegisterPage">
+            <div className="flex justify-center">
+              <Register />
+            </div>
+          </NavLink>
+
         </div>
       </div>
     </div>

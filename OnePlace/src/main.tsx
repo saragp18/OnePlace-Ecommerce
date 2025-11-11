@@ -13,6 +13,9 @@ import DetailProduct from './pages/detailProduct.tsx'
 import AddProduct from './pages/AddProductForm.tsx'
 import CommentPage from './pages/CommentPage.tsx'
 import LoginPage from './pages/LoginPage.tsx'
+import Register from './components/RegisterBtn.tsx'
+import RegisterPage from './pages/RegisterPage.tsx'
+import WomanPage from './pages/WomanPage.tsx'
 
 
 const Routes= createBrowserRouter([{
@@ -57,6 +60,12 @@ const Routes= createBrowserRouter([{
   {
   path:"/CommentPage",
   element: <CommentPage/>
+},{
+  path:"/RegisterPage",
+  element: <RegisterPage/>
+},{
+  path:"/woman",
+  element: <WomanPage/>
 }])
 
 createRoot(document.getElementById('root')!).render(

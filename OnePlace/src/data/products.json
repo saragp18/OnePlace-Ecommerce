@@ -1066,6 +1066,181 @@
 "/img/Short9_1.png",
 "/img/Short9_2.png",
 "/img/Short9_3.png"]
-}
+},{
+"id": 78,
+"name": "Jeans",
+"price": "",
+"color": "",
+"sizes": [""],
+"description": "",
+"materials": [""
+],
+"image": ["/img/Jeans.png"]
+},{
+"id": 79,
+"name": "Skirts",
+"price": "",
+"color": "",
+"sizes": [""],
+"description": "",
+"materials": [""
+],
+"image": ["/img/Skirt.png"]
+},{
+"id": 80,
+"name": "Blouses and shirts",
+"price": "",
+"color": "",
+"sizes": [""],
+"description": "",
+"materials": [""
+],
+"image": ["/img/Blouses.png"]
+},{
+"id": 81,
+"name": "Dresses",
+"price": "",
+"color": "",
+"sizes": [""],
+"description": "",
+"materials": [""
+],
+"image": ["/img/Dresses.png"]
+},{
+"id": 82,
+"name": "Coats",
+"price": "",
+"color": "",
+"sizes": [""],
+"description": "",
+"materials": [""
+],
+"image": ["/img/Coats.png"]
+},{
+    "id": 83,
+    "name": "COTTON DRESS WITH SPAGUETTI STRAPS",
+    "price": "$25",
+    "color": "Beige",
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "description": "Light cotton dress with thin straps and a soft flowing texture. Designed for comfort and everyday style.",
+    "materials": [
+      "100% cotton",
+      "Machine wash max. 30°C",
+      "Do not bleach or tumble dry"
+    ],
+    "image": ["/img/CottonDress.png"]
+    
+  },
+  {
+    "id": 84,
+    "name": "KNITTED BUTTON-UP JACKET",
+    "price": "$40",
+    "color": "Ivory",
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "description": "Knitted jacket with front button closure and a soft texture, ideal for layering in cooler seasons.",
+    "materials": [
+      "60% cotton, 40% polyester",
+      "Hand wash cold",
+      "Lay flat to dry"
+    ],
+    "image": ["/img/Jacket.png"]
+  },
+  {
+    "id": 85,
+    "name": "FLOWING BLOUSE WITH RUFFLES",
+    "price": "$25",
+    "color": "White",
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "description": "Elegant blouse with delicate ruffles and a flowing silhouette for a refined look.",
+    "materials": [
+      "100% viscose",
+      "Iron at low temperature",
+      "Do not bleach"
+    ],
+    "image": ["/img/Flowing.png"]
+  },
+  {
+    "id": 86,
+    "name": "TAILORING TROUSERS WITH CROSSED WAIST",
+    "price": "$65",
+    "color": "Black",
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "description": "High-waisted tailored trousers featuring a crossed waist detail and straight leg cut.",
+    "materials": [
+      "65% polyester, 35% viscose",
+      "Dry clean recommended"
+    ],
+    "image": ["/img/Talloring.png"]
+  },
+  {
+    "id": 87,
+    "name": "WIDE HIGH JEANS",
+    "price": "$30",
+    "color": "Light blue",
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "description": "High-rise jeans with a wide leg and relaxed fit for modern comfort and style.",
+    "materials": [
+      "100% cotton",
+      "Machine wash cold",
+      "Color may fade over time"
+    ],
+    "image": ["/img/WideHigh.png"]
+  },
+  {
+    "id": 88,
+    "name": "RUSTIC CUT-OUT MIDI DRESS",
+    "price": "$25",
+    "color": "Terracotta",
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "description": "Rustic-style midi dress with side cut-outs and adjustable straps. Breathable and lightweight fabric.",
+    "materials": [
+      "80% cotton, 20% linen",
+      "Wash inside out",
+      "Dry flat"
+    ],
+    "image": ["/img/Rustic.png"]
+  },
+  {
+    "id": 89,
+    "name": "OFF-THE-SHOULDER BLOUSE",
+    "price": "$30",
+    "color": "White",
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "description": "Romantic off-the-shoulder blouse with elastic neckline and soft texture.",
+    "materials": [
+      "100% cotton",
+      "Iron at medium temperature",
+      "Do not bleach"
+    ],
+    "image": ["/img/Off.png"]
+  },
+  {
+    "id": 90,
+    "name": "BARREL CROPPED PANTS",
+    "price": "$45",
+    "color": "Beige",
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "description": "Modern barrel-fit cropped pants with pleats and comfortable elastic waistband.",
+    "materials": [
+      "98% cotton, 2% elastane",
+      "Machine wash cold",
+      "Iron inside out"
+    ],
+    "image": ["/img/Barrel.png"]
+  },
+  {
+    "id": 91,
+    "name": "STRIPED SLEEVELESS PEPLUM TOP",
+    "price": "$25",
+    "color": "Blue striped",
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "description": "Sleeveless peplum top with striped pattern and fitted silhouette.",
+    "materials": [
+      "100% cotton",
+      "Gentle cycle wash",
+      "Do not tumble dry"
+    ],
+    "image": ["/img/Striped.png"]
+  }
 ]
 
