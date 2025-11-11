@@ -26,14 +26,14 @@ function Navbar() {
           text-xs sm:text-sm lg:text-base font-medium text-gray-800
         "
       >
-        <NavLink to={"/home"}>
+        <NavLink to={"/"}>
           <button className="hover:bg-gray-100 px-2 sm:px-3 py-1 rounded-md transition-colors">
             HOME
           </button>
         </NavLink>
 
         <NavLink to="/new">
-        <button className="hover:bg-gray-100 px-2 sm:px-3 py-1 rounded-md transition-colors">
+        <button className="hover:bg-gray-100 px-2 sm:px-3 py-1 rounded-md transition-colors cursor-pointer">
           NEW
         </button>
         </NavLink>

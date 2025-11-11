@@ -1,4 +1,3 @@
-import React from "react";
 import OnePlace from "../assets/LOGO-BOLSO-1.png";
 import Fondo from "../assets/collage.png";
 import EmailTelefono from "../components/EmailTelefono";
