@@ -24,7 +24,7 @@ function DetailProductPage() {
   return (
     <>
       <Navbar/>
-      <ProductDetailPage name={item?.name || ""} price={item?.price || ""} color={item?.color || ""} sizes={item?.sizes || []} description={item?.description || ""} materials={item?.materials || []} images={item?.image || []}   />
+      <ProductDetailPage name ={item?.name || ""} price={item?.price || ""} color={item?.color || ""} sizes={item?.sizes || []} description={item?.description || ""} materials={item?.materials || []} images={item?.image || []}   />
       <Footer/>
     
     
