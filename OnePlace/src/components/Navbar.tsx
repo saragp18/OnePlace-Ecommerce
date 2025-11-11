@@ -23,7 +23,7 @@ function Navbar() {
         className="
           absolute left-1/2 transform -translate-x-1/2
           flex space-x-3 sm:space-x-5
-          text-xs sm:text-sm lg:text-base font-medium text-gray-800
+          text-xs sm:text-sm lg:text-base font-medium text-
         "
       >
         <NavLink to="/Home">

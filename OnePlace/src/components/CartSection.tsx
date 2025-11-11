@@ -8,7 +8,7 @@ console.log(items);
 
   return (
     <div className="p-8">
-      <h1 className="text-3xl font-bold mb-4">🛒 Tu carrito</h1>
+      <h1 className="text-3xl font-bold mb-4"></h1>
 
       {items.length === 0 ? (
         <p>No hay productos en el carrito</p>
