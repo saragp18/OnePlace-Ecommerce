@@ -33,7 +33,7 @@ function LoginPage() {
       ></div>
 
       <div className="relative flex flex-col md:flex-row bg-white rounded-3xl overflow-hidden shadow-2xl w-[90%] max-w-[900px] h-auto md:h-[520px] backdrop-blur-sm">
-        <div className="w-full md:w-1/2 bg-gray-100 flex items-center justify-center p-6 md:p-0">
+        <div className="w-full md:w-1/2 bg-white  flex items-center justify-center p-6 md:p-0">
           <img
             src={OnePlace}
             alt="OnePlace Logo"

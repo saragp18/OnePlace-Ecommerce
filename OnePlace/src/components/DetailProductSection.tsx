@@ -2,6 +2,7 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 interface ProductDetailProps {
+  onclick: () => void;
   name: string;
   price: string;
   color: string;
@@ -12,6 +13,7 @@ interface ProductDetailProps {
 }
 
 function ProductDetailPage({
+  onclick,
   name,
   price ,
   color,
@@ -70,7 +72,9 @@ function ProductDetailPage({
         </div>
 
         <div className="mt-6 flex flex-col gap-3">
-          <button className="border border-black py-3 rounded-md hover:bg-black hover:text-white transition">
+          <button className="border border-black py-3 rounded-md hover:bg-black hover:text-white transition"
+            onClick={() => onclick()}
+          >
             ADD TO CART
           </button>
           <button className="bg-black text-white py-3 rounded-md hover:opacity-90 transition">

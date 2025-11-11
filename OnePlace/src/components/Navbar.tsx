@@ -68,6 +68,7 @@ function Navbar() {
             className="w-4 h-4 sm:w-5 sm:h-5 object-contain"
           />
         </button>
+        <NavLink to="/cart">
         <button className="flex items-center space-x-2 hover:bg-gray-100 px-2 sm:px-3 py-1 rounded-md transition-colors">
           <span>Cart</span>
           <img
@@ -76,6 +77,7 @@ function Navbar() {
             className="w-4 h-4 sm:w-5 sm:h-5 object-contain"
           />
         </button>
+        </NavLink>
         <NavLink to="/">
         <button className="flex items-center space-x-2 hover:bg-black hover:text-white px-2 sm:px-3 py-1 rounded-md transition-colors cursor-pointer">
         <span>Login</span>
