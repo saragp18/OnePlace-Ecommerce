@@ -133,10 +133,6 @@ const Categories = () => {
           </div>
         </div>
       </div>
-
-      <button className="mt-14 px-8 py-3 rounded-full bg-black text-white text-sm tracking-widest hover:bg-gray-500 transition-colors">
-        LOAD MORE
-      </button>
     </section>
   );
 };

@@ -13,10 +13,13 @@ import DetailProduct from './pages/detailProduct.tsx'
 import AddProduct from './pages/AddProductForm.tsx'
 import CommentPage from './pages/CommentPage.tsx'
 import LoginPage from './pages/LoginPage.tsx'
-import Register from './components/RegisterBtn.tsx'
 import RegisterPage from './pages/RegisterPage.tsx'
 import WomanPage from './pages/WomanPage.tsx'
 import JacketsPage from './pages/JacketsPage.tsx'
+import JeanPage from './pages/JeanPage.tsx'
+import ShirtsPage from './pages/ShirtsPage.tsx'
+import TshirtsPage from './pages/TshirtPage.tsx'
+import ShortPage from './pages/ShortPage.tsx'
 
 
 const Routes= createBrowserRouter([{
@@ -70,6 +73,18 @@ const Routes= createBrowserRouter([{
 },{
   path:"/jackets",
   element: <JacketsPage/>
+},{
+  path:"/jeans",
+  element: <JeanPage/>
+},{
+  path:"/shirts",
+  element: <ShirtsPage/>
+},{
+  path:"/T-shirts",
+  element: <TshirtsPage/>
+},{
+  path:"/bermudas",
+  element: <ShortPage/>
 }])
 
 createRoot(document.getElementById('root')!).render(
