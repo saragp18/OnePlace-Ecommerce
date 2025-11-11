@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 interface ProductDetailProps {
   name: string;
@@ -79,9 +80,11 @@ function ProductDetailPage({
           <button className="bg-black text-white py-3 rounded-md hover:opacity-90 transition">
             BUY NOW
           </button>
-          <button className="bg-gray-200 py-3 rounded-md hover:bg-gray-300 transition">
-            CHAT HERE
+          <NavLink to="/CommentPage">
+              <button className="border border-black py-3 rounded-md hover:bg-black hover:text-white transition w-full">
+           CHAT HERE
           </button>
+          </NavLink>
         </div>
 
         {/* Description */}

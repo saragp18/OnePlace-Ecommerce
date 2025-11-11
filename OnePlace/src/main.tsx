@@ -8,11 +8,20 @@ import NewPage from './pages/newPage.tsx'
 import CategoriesPage from './pages/categoriesPage.tsx'
 import ManPage from './pages/ManPage.tsx'
 import DetailProduct from './pages/detailProduct.tsx'
+import AddProduct from './pages/AddProductForm.tsx'
+import CommentPage from './pages/CommentPage.tsx'
+import LoginPage from './pages/LoginPage.tsx'
 
 
 const Routes= createBrowserRouter([{
   path:"/",
-  element:<Home/>
+  element: <LoginPage/>,
+
+},
+{
+  path:"/Home",
+  element:<Home/>,
+   
 },
 {
   path:"/new",
@@ -26,11 +35,10 @@ const Routes= createBrowserRouter([{
   element: <h2> More Sells page</h2>
 },{
   path:"/sell",
-  element: <h2> sell page</h2>
+  element: < AddProduct/>
 },{
   path:"/collection",
   element: <h2> Collection page</h2>
-},])
 },
 {
   path:"/men",
@@ -38,6 +46,9 @@ const Routes= createBrowserRouter([{
 },{
   path:"/Product/:id",
   element:<DetailProduct/>
+},{
+  path:"/CommentPage",
+  element: <CommentPage/>
 }])
 
 createRoot(document.getElementById('root')!).render(

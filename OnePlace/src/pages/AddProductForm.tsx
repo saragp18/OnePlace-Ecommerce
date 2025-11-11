@@ -1,6 +1,4 @@
-import React from "react";
 import Navbar from "../components/Navbar";
-import AddPro from "../assets/agregar-fondo.png";
 import ProductName from "../components/ProductName";
 import ProductDes from "../components/ProductDescription";
 import ProductPrice from "../components/ProductPrice";
@@ -17,7 +15,7 @@ function AddProduct() {
       <div
         className="relative bg-cover bg-center bg-no-repeat h-[300px] sm:h-[350px] md:h-[400px] flex flex-col justify-center text-white"
         style={{
-          backgroundImage: `url(${AddPro})`,
+          backgroundImage:  "url('/img/agregar-fondo.png')"
         }}
       >
         <div className="absolute inset-0 bg-black/40"></div>

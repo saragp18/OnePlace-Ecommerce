@@ -1,9 +1,7 @@
-import React from "react";
 import OnePlace from "../assets/LOGO-BOLSO-1.png";
 import Fondo from "../assets/collage.png";
 import EmailTelefono from "../components/EmailTelefono";
 import Contrasena from "../components/Contrasena";
-import Register from "../components/RegisterBtn";
 import Login from "../components/LoginBtn";
 import ContrasenaConfirma from "../components/confirmPassword";
 

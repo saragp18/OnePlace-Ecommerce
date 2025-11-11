@@ -1,11 +1,6 @@
-import React from "react";
 import Navbar from "../components/Navbar";
 import Chat from "../components/Chat";
-import Commnets from "../assets/Fondo-comments.png";
 import Send from "../components/SendMessageBtn";
-import veintey7 from "../assets/24y7.png";
-import pregunta from "../assets/Pregunta.png";
-import Caja from "../assets/Mano-con-caja.png";
 
 function CommentPage() {
   return (
@@ -13,7 +8,7 @@ function CommentPage() {
      
       <div
         className="relative min-h-screen bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${Commnets})` }}
+        style={{ backgroundImage:"url('/img/Fondo-comments.png')" }}
       >
        
         <div className="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
@@ -53,9 +48,10 @@ function CommentPage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-10 max-w-5xl w-full text-center">
           <div className="px-4">
             <img
-              src={veintey7}
+              src="/img/24y7.png"
               alt="24/7 Icon"
               className="w-16 h-16 md:w-20 md:h-20 mx-auto mb-4 object-contain"
+
             />
             <p className="text-gray-700 text-sm md:text-base">
               Answer questions about products, availability, sizes, prices,
@@ -65,7 +61,7 @@ function CommentPage() {
 
           <div className="px-4">
             <img
-              src={pregunta}
+              src="/img/Pregunta.png"
               alt="Question Icon"
               className="w-16 h-16 md:w-20 md:h-20 mx-auto mb-4 object-contain"
             />
@@ -77,7 +73,7 @@ function CommentPage() {
 
           <div className="px-4">
             <img
-              src={Caja}
+              src="/img/Mano-con-caja.png"
               alt="Box Icon"
               className="w-16 h-16 md:w-20 md:h-20 mx-auto mb-4 object-contain"
             />
