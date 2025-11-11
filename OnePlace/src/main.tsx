@@ -6,19 +6,24 @@ import Home from './pages/home.tsx'
 import Moresellspage from './pages/Moresellspage.tsx'
 import DetailProductPage from './pages/DetailProductPage.tsx'
 
+import NewPage from './pages/newPage.tsx'
 
-const routes= createBrowserRouter ([{
+import CategoriesPage from './pages/categoriesPage.tsx'
+import ManPage from './pages/ManPage.tsx'
+import DetailProduct from './pages/detailProduct.tsx'
+
+
+const Routes= createBrowserRouter([{
   path:"/",
   element:<Home/>
-
 },
 {
   path:"/new",
-  element: <h2> new page</h2>
+  element: <NewPage />
 },
 {
   path:"/categories",
-  element: <h2> Categories page</h2>
+  element: <CategoriesPage />
 },{
   path:"/moresells",
   element: <Moresellspage/>
@@ -28,15 +33,18 @@ const routes= createBrowserRouter ([{
 },{
   path:"/collection",
   element: <h2> Collection page</h2>
+},])
 },
 {
- path:"/" 
-},
-{path:"/Product/:id",
-  element:<DetailProductPage />}])
+  path:"/men",
+  element: <ManPage/>
+},{
+  path:"/Product/:id",
+  element:<DetailProduct/>
+}])
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <RouterProvider router={routes}/>
+    <RouterProvider router={Routes}/>
   </StrictMode>,
 )

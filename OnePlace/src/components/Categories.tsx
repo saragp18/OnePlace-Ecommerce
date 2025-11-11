@@ -41,6 +41,7 @@ const Categories = () => {
           </div>
         </div>
 
+        
         <div className="relative group overflow-hidden rounded-3xl cursor-pointer">
           <NavLink to="/jackets">
             <img
