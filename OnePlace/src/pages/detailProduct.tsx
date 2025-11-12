@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import type { Product } from "../type/type";
 import products from "../data/products.json"
 import { useDispatch } from "react-redux";
-import { addToCart } from "../redux/cartslice";
+import { addToCart } from "../redux/cartSlice";
 import Footer from "../components/Footer";
 
 
