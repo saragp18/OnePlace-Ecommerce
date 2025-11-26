@@ -5,7 +5,7 @@ import type { PayloadAction } from "@reduxjs/toolkit";
 export interface Product {
   id: number;
   name: string;
-  price: string; 
+  price: number;
   image: string;
   color: string;
   quantity: number;

@@ -30,11 +30,13 @@ function DetailProductPage() {
 
     const imageString = Array.isArray(item.image) ? item.image[0] || "" : (item.image as unknown as string) || "";
 
+    const numericPrice = typeof item.price === "number" ? item.price : parseFloat(String(item.price).replace(/[^0-9.-]+/g, "")) || 0;
+
     dispatch(
       addToCart({
         id: item.id,
         name: item.name,
-        price: item.price,
+        price: numericPrice,
         image: imageString,
         color: item.color,
         quantity: 1,

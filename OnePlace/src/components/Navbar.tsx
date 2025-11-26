@@ -1,91 +1,116 @@
-import Logo from "/img/LOGO BOLSO 2.png";
-import LookIcon from "/img/lupa.png";
-import CartIcon from "/img/cart.png";
-import { NavLink } from "react-router-dom";
+import { useState } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
+import type { RootState } from "../redux/store";
+import type { Product as DataProduct } from "../type/type";
 
-function Navbar() {
+const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [query, setQuery] = useState("");
+  const navigate = useNavigate();
+
+  // ✅ Productos desde Redux
+  const products = useSelector((state: RootState) => state.products.items) as DataProduct[];
+
+  // ✅ Extraer los nombres
+  const suggestions = products.map((p: DataProduct) => p.name);
+
+  // ✅ Buscar producto y navegar por ID
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (!query.trim()) return;
+
+    const product = products.find(
+      (p) => p.name.toLowerCase() === query.toLowerCase()
+    );
+
+    if (product) {
+      navigate(`/Product/${product.id}`, { state: product.id });
+      setQuery("");
+    } else {
+      alert("Product not found");
+    }
+  };
+
   return (
-    <header className="relative w-full flex items-center justify-between px-4 sm:px-6 py-3">
-      
-      <div className="flex items-center space-x-2 sm:space-x-3">
-        <img
-          src={Logo}
-          alt="OnePlace Logo"
-          className="w-6 h-6 sm:w-8 sm:h-8 object-contain"
-        />
-        <p className="text-base sm:text-lg lg:text-xl font-light tracking-wide text-black">
-          ONEPLACE
-        </p>
-      </div>
+    <>
+      {/* OCULTAR ICONO DEL DATALIST */}
+      <style>
+        {`
+          input::-webkit-calendar-picker-indicator {
+            display: none !important;
+          }
+        `}
+      </style>
 
-      
-      <nav
-        className="
-          absolute left-1/2 transform -translate-x-1/2
-          flex space-x-3 sm:space-x-5
-          text-xs sm:text-sm lg:text-base font-medium text-
-        "
-      >
-        <NavLink to="/Home">
-          <button className="hover:bg-gray-100 px-2 sm:px-3 py-1 rounded-md transition-colors">
-            HOME
-          </button>
-        </NavLink>
+      <nav className="bg-white border-b border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-16">
 
-        <NavLink to="/new">
-        <button className="hover:bg-gray-100 px-2 sm:px-3 py-1 rounded-md transition-colors cursor-pointer">
-          NEW
-        </button>
-        </NavLink>
+            <NavLink to="/Home">
+              <img src="/img/LOGO BOLSO 2.png" alt="Logo" className="h-10 w-auto" />
+            </NavLink>
 
-        <NavLink to="/categories">
-        <button className="hover:bg-gray-100 px-2 sm:px-3 py-1 rounded-md transition-colors">
-          CATEGORIES
-        </button>
-        </NavLink>
+            <div className="hidden md:flex space-x-8 font-medium text-gray-700">
+              <NavLink to="/Home">Home</NavLink>
+              <NavLink to="/new">New</NavLink>
+              <NavLink to="/categories">Categories</NavLink>
+              <NavLink to="/moresells">More Sells</NavLink>
+              <NavLink to="/sell">Sell</NavLink>
+            </div>
 
-        <NavLink to="/moresells">
-        <button className="hover:bg-gray-100 px-2 sm:px-3 py-1 rounded-md transition-colors">
-          MORE SELLS
-        </button>
-        </NavLink>
+            <div className="hidden md:flex items-center space-x-6">
 
-        <NavLink to="/sell">
-        <button className="hover:bg-gray-100 px-2 sm:px-3 py-1 rounded-md transition-colors">
-          SELL
-        </button>
-        </NavLink>
+              {/* 🔍 SEARCH */}
+              <form onSubmit={handleSearch} className="relative">
+                <input
+                  list="productSuggestions"
+                  value={query}
+                  onChange={(e) => setQuery(e.target.value)}
+                  className="border rounded-full px-4 py-1 text-sm"
+                  placeholder="Search..."
+                />
+
+                <datalist id="productSuggestions">
+                  {suggestions.map((name, index) => (
+                    <option key={index} value={name} />
+                  ))}
+                </datalist>
+
+                <button type="submit">
+                  <img
+                    src="/img/Lupa.svg"
+                    className="w-5 h-5 absolute right-2 top-1"
+                  />
+                </button>
+              </form>
+
+              <NavLink to="/cart">
+                <img src="/img/Carrito.png" className="w-6 h-6" />
+              </NavLink>
+
+            </div>
+
+            <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
+              <img src="/img/Lupa.svg" className="w-6 h-6" />
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile */}
+        {isOpen && (
+          <div className="md:hidden px-6 pb-4 flex flex-col space-y-2">
+            <NavLink to="/Home">Home</NavLink>
+            <NavLink to="/new">New</NavLink>
+            <NavLink to="/categories">Categories</NavLink>
+            <NavLink to="/moresells">More Sells</NavLink>
+            <NavLink to="/sell">Sell</NavLink>
+          </div>
+        )}
       </nav>
-
-      
-      <div className="flex items-center space-x-3 sm:space-x-4">
-         
-        <button className="flex items-center space-x-2 hover:bg-gray-100 px-2 sm:px-3 py-1 rounded-md transition-colors">
-          <span>Look for</span>
-          <img
-            src={LookIcon}
-            alt="Look Icon"
-            className="w-4 h-4 sm:w-5 sm:h-5 object-contain"
-          />
-        </button>
-        <NavLink to="/cart">
-        <button className="flex items-center space-x-2 hover:bg-gray-100 px-2 sm:px-3 py-1 rounded-md transition-colors">
-          <span>Cart</span>
-          <img
-            src={CartIcon}
-            alt="Cart Icon"
-            className="w-4 h-4 sm:w-5 sm:h-5 object-contain"
-          />
-        </button>
-        </NavLink>
-        <NavLink to="/">
-        <button className="flex items-center space-x-2 hover:bg-black hover:text-white px-2 sm:px-3 py-1 rounded-md transition-colors cursor-pointer">
-        <span>Login</span>
-        </button>
-      </NavLink>
-      </div>
-    </header>
+    </>
   );
-}
+};
 
 export default Navbar;
