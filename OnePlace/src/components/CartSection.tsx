@@ -1,44 +1,65 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import type { RootState } from "../redux/store";
+import { removeFromCart } from "../redux/cartSlice";
 
-
-const CartPage = () => {
+const CartSection = () => {
+  const dispatch = useDispatch();
   const items = useSelector((state: RootState) => state.cart.items);
-console.log(items);
+
+  const total = items.reduce(
+    (sum, item) => sum + Number(item.price.replace(/[^0-9.]/g, "")) * item.quantity,
+    0
+  );
 
   return (
-    <div className="p-8">
-      <h1 className="text-3xl font-bold mb-4"></h1>
+    <div className="max-w-4xl mx-auto p-8">
+
+      <h1 className="text-3xl font-bold mb-6">Shopping Cart</h1>
 
       {items.length === 0 ? (
-        <p>No hay productos en el carrito</p>
+        <p>Your cart is empty</p>
       ) : (
-        <div className="flex flex-col gap-4">
-          {items.map((item) => 
-        
-          (
+        <>
+          {items.map(item => (
             <div
               key={item.id}
-              className="flex items-center justify-between border-b pb-4"
+              className="flex justify-between items-center border-b py-4"
             >
-              <div className="flex items-center gap-4">
-                <img
-                  src={item.image[0]}
-                  alt={item.name}
-                  className="w-20 h-20 object-cover rounded"
-                />
+              <div className="flex gap-4">
+                <img src={item.image} className="w-24 rounded" />
                 <div>
-                  <h2 className="font-semibold">{item.name}</h2>
-                  <p className="text-gray-600">{item.color}</p>
+                  <h2>{item.name}</h2>
+                  <p>{item.color}</p>
+                  <p>
+                    $
+                    {(Number(item.price.replace(/[^0-9.]/g, "")) * item.quantity).toLocaleString(
+                      "en-US",
+                      { minimumFractionDigits: 2, maximumFractionDigits: 2 }
+                    )} USD
+                  </p>
                 </div>
               </div>
-              <p className="font-semibold">${item.price}</p>
+
+              <button
+                onClick={() => dispatch(removeFromCart(item.id))}
+                className="text-red-600"
+              >
+                Remove
+              </button>
             </div>
           ))}
-        </div>
+
+          <div className="text-right text-xl mt-6 font-bold">
+            TOTAL: $
+            {total.toLocaleString("en-US", {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2
+            })} USD
+          </div>
+        </>
       )}
     </div>
   );
 };
 
-export default CartPage;
+export default CartSection;

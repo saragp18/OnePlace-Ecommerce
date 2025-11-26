@@ -1,44 +1,32 @@
-import { useLocation } from "react-router-dom";
-import ProductDetailPage from "../components/DetailProductSection";
-import Navbar from "../components/Navbar"
-import { useEffect, useState } from "react";
-import type { Product } from "../type/type";
-import products from "../data/products.json"
-import { useDispatch } from "react-redux";
-import { addToCart } from "../redux/cartSlice";
-import Footer from "../components/Footer";
-
+import { useParams } from "react-router-dom";
+import { useSelector } from "react-redux";
+import type { RootState } from "../redux/store";
 
 function DetailProduct() {
-const location = useLocation()
-  const [item, setitem] = useState<Product>()
-  const dispatch = useDispatch()
 
-  useEffect(() => {
-    function getitem() {
-      const itemid = location.state
-      const itemfinded:any = products.find((jsonitem) => Number(jsonitem.id) === Number(itemid))
-      setitem(itemfinded)
+  const { id } = useParams();
+  const products = useSelector((state: RootState) => state.products.items);
 
+  const product = products.find(p => p.id === Number(id));
 
-    }
-    getitem()
-  })
+  if (!product) {
+    return <p className="text-center p-10">Product not found</p>;
+  }
+
   return (
-    <>
-      <Navbar/>
-      <ProductDetailPage onclick={() => { 
-        console.log("aosijd");
-        
-        dispatch(addToCart(item))}} name={item?.name||""}price={item?.price||""}color={item?.color||""}sizes={item?.sizes||[]}description={item?.description||""}materials={item?.materials||[]}images={item?.image||[]}/>
-        <Footer/>
+    <div className="max-w-5xl mx-auto p-10 flex gap-10">
+      <img
+        src={product.image || "/img/default.jpg"}
+        className="w-80 object-cover"
+      />
 
-    
-    
-
-
-    </>
-  )
+      <div>
+        <h1 className="text-3xl font-bold">{product.name}</h1>
+        <p className="mt-2 text-gray-500">Color: {product.color}</p>
+        <p className="text-xl font-semibold mt-4">${product.price}</p>
+      </div>
+    </div>
+  );
 }
 
 export default DetailProduct;
