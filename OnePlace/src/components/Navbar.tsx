@@ -61,7 +61,7 @@ const Navbar = () => {
 
             <div className="hidden md:flex space-x-8 font-medium text-gray-700">
               <NavLink to="/Home" className={" hover:bg-gray-100 px-4 py-2 rounded"}>Home</NavLink>
-              <NavLink to="/new " className={" hover:bg-gray-100 px-4 py-2 rounded"}>New</NavLink>
+              <NavLink to="/new" className={" hover:bg-gray-100 px-4 py-2 rounded"}>New</NavLink>
               <NavLink to="/categories" className={" hover:bg-gray-100 px-4 py-2 rounded"}>Categories</NavLink>
               <NavLink to="/moresells" className={" hover:bg-gray-100 px-4 py-2 rounded"}>More Sells</NavLink>
               <NavLink to="/sell" className={" hover:bg-gray-100 px-4 py-2 rounded"}>Sell</NavLink>
