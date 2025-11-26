@@ -48,16 +48,23 @@ const Navbar = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
 
-            <NavLink to="/Home">
-              <img src="/img/LOGO BOLSO 2.png" alt="Logo" className="h-10 w-auto" />
-            </NavLink>
+            <div className="flex items-center space-x-2 sm:space-x-3">
+              <img
+                src="/img/LOGO BOLSO 2.png"
+                alt="OnePlace Logo"
+                className="w-6 h-6 sm:w-8 sm:h-8 object-contain"
+              />
+              <p className="text-base sm:text-lg lg:text-xl font-light tracking-wide text-black">
+                ONEPLACE
+              </p>
+            </div>
 
             <div className="hidden md:flex space-x-8 font-medium text-gray-700">
-              <NavLink to="/Home">Home</NavLink>
-              <NavLink to="/new">New</NavLink>
-              <NavLink to="/categories">Categories</NavLink>
-              <NavLink to="/moresells">More Sells</NavLink>
-              <NavLink to="/sell">Sell</NavLink>
+              <NavLink to="/Home" className={" hover:bg-gray-100 px-4 py-2 rounded"}>Home</NavLink>
+              <NavLink to="/new " className={" hover:bg-gray-100 px-4 py-2 rounded"}>New</NavLink>
+              <NavLink to="/categories" className={" hover:bg-gray-100 px-4 py-2 rounded"}>Categories</NavLink>
+              <NavLink to="/moresells" className={" hover:bg-gray-100 px-4 py-2 rounded"}>More Sells</NavLink>
+              <NavLink to="/sell" className={" hover:bg-gray-100 px-4 py-2 rounded"}>Sell</NavLink>
             </div>
 
             <div className="hidden md:flex items-center space-x-6">
@@ -80,7 +87,7 @@ const Navbar = () => {
 
                 <button type="submit">
                   <img
-                    src="/img/Lupa.svg"
+                    src="/img/lupa.png"
                     className="w-5 h-5 absolute right-2 top-1"
                   />
                 </button>
