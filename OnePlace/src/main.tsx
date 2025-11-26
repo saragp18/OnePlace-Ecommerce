@@ -24,6 +24,7 @@ import TshirtsPage from './pages/TshirtPage.tsx'
 import ShortPage from './pages/ShortPage.tsx'
 import SueterPage from './pages/SueterPage.tsx'
 import CartPage from './pages/CartPage.tsx'
+import DetailProductPage from './pages/DetailProductPage.tsx'
 
 const Routes = createBrowserRouter([
   { path: "/", element: <LoginPage /> },
@@ -33,7 +34,7 @@ const Routes = createBrowserRouter([
   { path: "/moresells", element: <Moresellspage /> },
   { path: "/sell", element: <AddProduct /> },
   { path: "/men", element: <ManPage /> },
-  { path: "/Product/:id", element: <DetailProduct /> },
+  { path: "/Product/:id", element: <DetailProductPage /> },
   { path: "/CommentPage", element: <CommentPage /> },
   { path: "/RegisterPage", element: <RegisterPage /> },
   { path: "/woman", element: <WomanPage /> },
