@@ -3,6 +3,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import OnePlace from "../assets/LOGO-BOLSO-1.png";
 import Fondo from "../assets/collage.png";
 import Register from "../components/RegisterBtn";
+import { loginUser } from "../services/authenticationServices";
 
 function LoginPage() {
   const [email, setEmail] = useState("");
@@ -10,16 +11,18 @@ function LoginPage() {
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
-  const handleLogin = (e: React.FormEvent) => {
+  const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
+    setError("");
 
-    const validEmail = "admin@oneplace.com";
-    const validPassword = "12345";
+    try {
+      const { user } = await loginUser(email, password);
 
-    if (email === validEmail && password === validPassword) {
-      navigate("/Home");
-    } else {
-      setError("Incorrect email or password");
+      if (user) {
+        navigate("/Home");
+      }
+    } catch (err: any) {
+      setError(err.message || "Incorrect email or password");
     }
   };
 
@@ -27,13 +30,11 @@ function LoginPage() {
     <div className="relative flex min-h-screen items-center justify-center overflow-hidden">
       <div
         className="absolute inset-0 bg-cover bg-center blur-sm scale-105"
-        style={{
-          backgroundImage: `url(${Fondo})`,
-        }}
+        style={{ backgroundImage: `url(${Fondo})` }}
       ></div>
 
       <div className="relative flex flex-col md:flex-row bg-white rounded-3xl overflow-hidden shadow-2xl w-[90%] max-w-[900px] h-auto md:h-[520px] backdrop-blur-sm">
-        <div className="w-full md:w-1/2 bg-white  flex items-center justify-center p-6 md:p-0">
+        <div className="w-full md:w-1/2 bg-white flex items-center justify-center p-6 md:p-0">
           <img
             src={OnePlace}
             alt="OnePlace Logo"
@@ -77,16 +78,12 @@ function LoginPage() {
               <p className="text-red-600 text-sm mt-2 text-center">{error}</p>
             )}
 
-            <NavLink to="/Home">
-              <button
-                type="submit"
-                className="w-full bg-black text-white py-3 rounded-2xl text-lg font-medium hover:bg-gray-800 transition mt-4"
-              >
-
-                Sign in
-              </button>
-            </NavLink>
-
+            <button
+              type="submit"
+              className="w-full bg-black text-white py-3 rounded-2xl text-lg font-medium hover:bg-gray-800 transition mt-4"
+            >
+              Sign in
+            </button>
           </form>
 
           <p className="text-sm text-gray-600 mt-4 mb-2 text-center">
@@ -98,7 +95,6 @@ function LoginPage() {
               <Register />
             </div>
           </NavLink>
-
         </div>
       </div>
     </div>
