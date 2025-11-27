@@ -1,8 +1,8 @@
-/*import React, { useEffect } from "react";
+import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { AppDispatch } from "../redux/store";
-import { fetchUser } from "../redux/userSlice";
-import Navbar from "../components/SearchBar";
+import { fetchUser } from "../redux/user";
+import Navbar from "../components/Navbar";
 import UserInfo from "../components/UserInfo";
 
 const UserPage: React.FC = () => {
@@ -26,4 +26,4 @@ const UserPage: React.FC = () => {
   );
 };
 
-export default UserPage;*/
+export default UserPage;

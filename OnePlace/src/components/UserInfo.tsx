@@ -1,4 +1,4 @@
-/*import React from "react";
+import React from "react";
 import { useSelector } from "react-redux";
 import LogOut from "./LogOutBtn";
 
@@ -31,4 +31,4 @@ function UserInfo() {
   );
 }
 
-export default UserInfo;*/
+export default UserInfo;
