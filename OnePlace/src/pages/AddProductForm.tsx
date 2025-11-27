@@ -11,6 +11,7 @@ import SaveBtn from "../components/SaveBtn";
 function AddProduct() {
   return (
     <>
+          <Navbar />
       
       <div
         className="relative bg-cover bg-center bg-no-repeat h-[300px] sm:h-[350px] md:h-[400px] flex flex-col justify-center text-white"
@@ -21,7 +22,6 @@ function AddProduct() {
         <div className="absolute inset-0 bg-black/40"></div>
 
         <div className="relative z-10">
-          <Navbar />
           <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-6 mt-12 sm:mt-14 md:mt-16">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-snug sm:leading-tight md:leading-tight mb-4 tracking-tight">
               INSPIRING <br /> THE WORLD
