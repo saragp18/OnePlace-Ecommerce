@@ -62,7 +62,7 @@ const DetailProduct = () => {
         </button>
 
         <button className="border border-gray-400 py-2 hover:bg-gray-100">
-          CHAT HERE
+          CONTACT 
         </button>
       </div>
     </div>

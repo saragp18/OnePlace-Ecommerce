@@ -82,7 +82,7 @@ function ProductDetailPage({
           </button>
           <NavLink to="/CommentPage">
               <button className="border border-black py-3 rounded-md hover:bg-black hover:text-white transition w-full">
-           CHAT HERE
+           CONTACT
           </button>
           </NavLink>
         </div>
