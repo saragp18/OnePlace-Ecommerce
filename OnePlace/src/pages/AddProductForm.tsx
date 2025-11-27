@@ -1,14 +1,48 @@
+import React, { useState } from "react";
 import Navbar from "../components/Navbar";
-import ProductName from "../components/ProductName";
-import ProductDes from "../components/ProductDescription";
-import ProductPrice from "../components/ProductPrice";
 import UploadImg from "../components/UploadImageBtn";
-import Available from "../components/AvialiableBtn";
-import NotAvailable from "../components/NotAvialableBtn";
 import CategoryMenu from "../components/CategoryMenu";
-import SaveBtn from "../components/SaveBtn";
+import { useDispatch, useSelector } from "react-redux";
+import type { AppDispatch, RootState } from "../redux/store";
+import { createListing } from "../redux/listingsSlice";
+import { useNavigate } from "react-router-dom";
 
 function AddProduct() {
+  const dispatch = useDispatch<AppDispatch>();
+  const navigate = useNavigate();
+  const user = useSelector((state: RootState) => state.user.data);
+
+  const [name, setName] = useState("");
+  const [description, setDescription] = useState("");
+  const [price, setPrice] = useState("");
+  const [category, setCategory] = useState("Women");
+  const [available, setAvailable] = useState(true);
+
+  const handleSave = async () => {
+    if (!user?.id) {
+      alert("Debes iniciar sesión para publicar.");
+      return;
+    }
+
+    const listing = {
+      userId: user.id,
+      name,
+      description,
+      price,
+      category,
+      available,
+      image: "",
+    };
+
+    try {
+      await dispatch(createListing(listing)).unwrap();
+      navigate("/user");
+    } catch (err) {
+      console.error(err);
+      alert("Error al crear la publicación.");
+    }
+  };
+
   return (
     <>
           <Navbar />
@@ -54,7 +88,14 @@ function AddProduct() {
               <h2 className="text-xs sm:text-sm md:text-sm font-semibold mb-1 sm:mb-2 text-gray-800">
                 Product Name
               </h2>
-              <ProductName />
+              <input
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                type="text"
+                name="Product Name"
+                placeholder="Product Name"
+                className="w-full max-w-sm px-4 py-2 bg-gray-200 rounded-xl border-none focus:outline-none shadow-inner"
+              />
             </div>
 
             
@@ -62,7 +103,14 @@ function AddProduct() {
               <h2 className="text-xs sm:text-sm md:text-sm font-semibold mb-1 sm:mb-2 text-gray-800">
                 Product Description
               </h2>
-              <ProductDes />
+              <input
+                value={description}
+                onChange={(e) => setDescription(e.target.value)}
+                type="text"
+                name="Product description"
+                placeholder="Product Description"
+                className="w-full max-w-sm px-4 py-2 bg-gray-200 rounded-xl border-none focus:outline-none shadow-inner"
+              />
             </div>
 
            
@@ -70,7 +118,14 @@ function AddProduct() {
               <h2 className="text-xs sm:text-sm md:text-sm font-semibold mb-1 sm:mb-2 text-gray-800">
                 Price
               </h2>
-              <ProductPrice />
+              <input
+                value={price}
+                onChange={(e) => setPrice(e.target.value)}
+                type="text"
+                name="Product Price"
+                placeholder="Product price"
+                className="w-full max-w-sm px-4 py-2 bg-gray-200 rounded-xl border-none focus:outline-none shadow-inner"
+              />
             </div>
 
    
@@ -89,14 +144,33 @@ function AddProduct() {
                 Availability
               </h2>
               <div className="flex flex-wrap gap-2 sm:gap-3">
-                <Available />
-                <NotAvailable />
+                <label className="inline-flex items-center gap-2">
+                  <input
+                    type="radio"
+                    checked={available}
+                    onChange={() => setAvailable(true)}
+                  />
+                  Disponible
+                </label>
+                <label className="inline-flex items-center gap-2">
+                  <input
+                    type="radio"
+                    checked={!available}
+                    onChange={() => setAvailable(false)}
+                  />
+                  No disponible
+                </label>
               </div>
             </div>
 
            
             <div className="mt-4 sm:mt-6 flex justify-center md:justify-start">
-              <SaveBtn />
+              <button
+                onClick={handleSave}
+                className="w-full md:w-48 bg-black text-white font-semibold py-2 rounded-md hover:bg-gray-800 transition-colors duration-300"
+              >
+                Save
+              </button>
             </div>
           </div>
         </div>

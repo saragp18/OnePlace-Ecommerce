@@ -1,27 +1,39 @@
-/*import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
-import { User } from "../types/user";
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import type { PayloadAction } from "@reduxjs/toolkit";
+import type { User } from "../redux/user";
+import supabase from "../services/supabaseClient";
 
 
 export const fetchUser = createAsyncThunk<User, string>(
   "user/fetchUser",
-  async (userId) => {
-    const res = await fetch(`http://localhost:3001/users/${userId}`);
-    const data: User = await res.json();
-    return data;
+  async (userId, { rejectWithValue }) => {
+    const { data, error } = await supabase.from("User").select("*").eq("id", userId).single();
+    if (error) return rejectWithValue(error.message);
+
+    // Normalize possible column names coming from Supabase
+    const normalized: User = {
+      id: (data as any)?.id,
+      name: (data as any)?.name || (data as any)?.nombre || (data as any)?.full_name || "",
+      email: (data as any)?.email || (data as any)?.gmail || "",
+      phone: (data as any)?.phone || (data as any)?.telefono || "",
+    };
+
+    return normalized;
   }
 );
 
 
 export const updateUser = createAsyncThunk<User, User>(
   "user/updateUser",
-  async (updatedUser) => {
-    const res = await fetch(`http://localhost:3001/users/${updatedUser.id}`, {
-      method: "PUT",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(updatedUser),
-    });
-    const data: User = await res.json();
-    return data;
+  async (updatedUser, { rejectWithValue }) => {
+    const { data, error } = await supabase
+      .from("User")
+      .update(updatedUser)
+      .eq("id", updatedUser.id)
+      .select()
+      .single();
+    if (error) return rejectWithValue(error.message);
+    return data as User;
   }
 );
 
@@ -49,10 +61,17 @@ const userSlice = createSlice({
     builder
       .addCase(fetchUser.pending, (state) => {
         state.loading = true;
+        state.error = null;
       })
       .addCase(fetchUser.fulfilled, (state, action: PayloadAction<User>) => {
         state.data = action.payload;
         state.loading = false;
+        state.error = null;
+      })
+      .addCase(fetchUser.rejected, (state, action) => {
+        state.loading = false;
+        state.error = (action.payload as string) || action.error.message || "Error fetching user";
+        state.data = null;
       })
       .addCase(updateUser.fulfilled, (state, action: PayloadAction<User>) => {
         state.data = action.payload;
@@ -61,4 +80,4 @@ const userSlice = createSlice({
 });
 
 export const { logout } = userSlice.actions;
-export default userSlice.reducer;*/
+export default userSlice.reducer;

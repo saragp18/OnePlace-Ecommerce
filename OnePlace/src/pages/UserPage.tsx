@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { AppDispatch } from "../redux/store";
-import { fetchUser } from "../redux/user";
+import type { AppDispatch } from "../redux/store";
+import { fetchUser } from "../type/userSlice";
 import Navbar from "../components/Navbar";
 import UserInfo from "../components/UserInfo";
+import UserListings from "../components/UserListings";
 
 const UserPage: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>();
@@ -20,7 +21,7 @@ const UserPage: React.FC = () => {
       <div className="flex flex-col md:flex-row flex-1">
         <UserInfo />
 
-        <div className="flex-1 p-6 md:p-10"></div>
+        <UserListings />
       </div>
     </div>
   );

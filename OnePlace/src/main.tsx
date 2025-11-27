@@ -24,6 +24,7 @@ import ShortPage from './pages/ShortPage.tsx'
 import SueterPage from './pages/SueterPage.tsx'
 import CartPage from './pages/CartPage.tsx'
 import DetailProductPage from './pages/DetailProductPage.tsx'
+import UserPage from './pages/UserPage.tsx'
 
 const Routes = createBrowserRouter([
   { path: "/", element: <LoginPage /> },
@@ -44,6 +45,7 @@ const Routes = createBrowserRouter([
   { path: "/bermudas", element: <ShortPage /> },
   { path: "/sweaters", element: <SueterPage /> },
   { path: "/cart", element: <CartPage/> },
+   { path: "/user", element: <UserPage /> }
 
 ])
 

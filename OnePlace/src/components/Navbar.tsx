@@ -64,6 +64,7 @@ const Navbar = () => {
               <NavLink to="/categories" className={" text-black hover:bg-gray-100 px-4 py-2 rounded"}>Categories</NavLink>
               <NavLink to="/moresells" className={"  text-black hover:bg-gray-100 px-4 py-2 rounded"}>More Sells</NavLink>
               <NavLink to="/sell" className={" text-black hover:bg-gray-100 px-4 py-2 rounded"}>Sell</NavLink>
+              <NavLink to="/user" className={" text-black hover:bg-gray-100 px-4 py-2 rounded"}>User</NavLink>
             </div>
 
             <div className="hidden md:flex items-center space-x-6">
@@ -111,6 +112,7 @@ const Navbar = () => {
             <NavLink to="/categories">Categories</NavLink>
             <NavLink to="/moresells">More Sells</NavLink>
             <NavLink to="/sell">Sell</NavLink>
+            <NavLink to="/user">User</NavLink>
           </div>
         )}
       </nav>

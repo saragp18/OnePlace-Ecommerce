@@ -1,5 +1,8 @@
 import { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import type { AppDispatch } from "../redux/store";
+import { fetchUser } from "../type/userSlice";
 import OnePlace from "../assets/LOGO-BOLSO-1.png";
 import Fondo from "../assets/collage.png";
 import Register from "../components/RegisterBtn";
@@ -10,6 +13,7 @@ function LoginPage() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
+  const dispatch = useDispatch<AppDispatch>();
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -19,7 +23,10 @@ function LoginPage() {
       const { user } = await loginUser(email, password);
 
       if (user) {
-        navigate("/Home");
+        // store userId so UserPage and other screens can load profile
+        localStorage.setItem("userId", user.id);
+        dispatch(fetchUser(user.id) as any);
+        navigate("/user");
       }
     } catch (err: any) {
       setError(err.message || "Incorrect email or password");

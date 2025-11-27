@@ -7,11 +7,11 @@ export interface Users {
     contraseña: string;
 }
 
-export async function postUserData(gmail: string) {
+export async function postUserData(id: string, gmail: string) {
 
     const { data, error } = await supabase
         .from('User')
-        .insert({gmail:gmail})
+        .insert({ id: id, gmail: gmail })
         .select()
     if (error) {
         console.error('Error inserting user data:', error);

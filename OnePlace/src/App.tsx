@@ -4,6 +4,7 @@ import Home from "./pages/home";
 import CategoriesPage from "./pages/categoriesPage";
 import CartPage from "./pages/CartPage";
 import DetailProduct from "./components/DetailProduct";
+import UserPage from "./pages/UserPage";
 
 function App() {
   return (
@@ -22,6 +23,9 @@ function App() {
 
         {/* PRODUCT DETAIL */}
         <Route path="/product/:id" element={<DetailProduct />} />
+
+            {/* USER PAGE */}
+        <Route path="/user" element={<UserPage />} /> 
 
       </Routes>
     </BrowserRouter>
