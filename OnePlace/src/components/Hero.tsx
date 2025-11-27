@@ -28,7 +28,7 @@ function Hero() {
             COLLECTION
           </h1>
 
-          <ViewAllBtn />
+          
         </div>
       </div>
     </div>
