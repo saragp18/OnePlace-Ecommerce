@@ -9,13 +9,12 @@ const Navbar = () => {
   const [query, setQuery] = useState("");
   const navigate = useNavigate();
 
-  // ✅ Productos desde Redux
+ 
   const products = useSelector((state: RootState) => state.products.items) as DataProduct[];
 
-  // ✅ Extraer los nombres
+  
   const suggestions = products.map((p: DataProduct) => p.name);
 
-  // ✅ Buscar producto y navegar por ID
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
 
@@ -35,7 +34,7 @@ const Navbar = () => {
 
   return (
     <>
-      {/* OCULTAR ICONO DEL DATALIST */}
+      
       <style>
         {`
           input::-webkit-calendar-picker-indicator {
@@ -69,7 +68,7 @@ const Navbar = () => {
 
             <div className="hidden md:flex items-center space-x-6">
 
-              {/* 🔍 SEARCH */}
+              
               <form onSubmit={handleSearch} className="relative">
                 <input
                   list="productSuggestions"
@@ -105,7 +104,6 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Mobile */}
         {isOpen && (
           <div className="md:hidden px-6 pb-4 flex flex-col space-y-2">
             <NavLink to="/Home">Home</NavLink>

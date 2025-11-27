@@ -1,6 +1,7 @@
 import Navbar from "../components/Navbar";
 import Chat from "../components/Chat";
 import Send from "../components/SendMessageBtn";
+import Footer from "../components/Footer";
 
 function CommentPage() {
   return (
@@ -83,6 +84,7 @@ function CommentPage() {
           </div>
         </div>
       </div>
+      <Footer/>
     </>
   );
 }
