@@ -1,19 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import products from "../data/products.json";
 
-/**
-Función ProductsWoman.
-Renderiza una sección que muestra los productos dirigidos a mujeres,
-filtrados según un rango específico de identificadores.
-
-Entradas:
-No recibe parámetros.
-
-Salidas:
-Retorna un componente JSX que despliega una cuadrícula con los productos
-cuyos identificadores están entre 83 y 91.
-*/
-
 const ProductsWoman = () => {
   const ProductsMan = products.filter((p) => p.id >= 83 && p.id <= 91);
   const navigate = useNavigate();

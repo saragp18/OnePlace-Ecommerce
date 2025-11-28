@@ -1,19 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import products from "../data/products.json";
 
-/**
-Función ProductsSweater.
-Renderiza una sección que muestra los productos tipo "sweater", filtrados
-según un rango específico de identificadores.
-
-Entradas:
-No recibe parámetros.
-
-Salidas:
-Retorna un componente JSX que despliega una cuadrícula con los productos
-cuyos identificadores están entre 92 y 100.
-*/
-
 const ProductsSweater = () => {
   const ProductsMan = products.filter((p) => p.id >= 92 && p.id <= 100);
   const navigate = useNavigate();

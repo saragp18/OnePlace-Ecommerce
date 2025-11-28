@@ -1,15 +1,3 @@
-/**
-Función ProductName.
-Muestra un campo de entrada de texto para que el usuario escriba el nombre del producto.
-
-Entradas:
-No recibe parámetros.
-
-Salidas:
-Retorna un componente JSX que contiene un input tipo texto
-con estilo personalizado para ingresar el nombre del producto.
-*/
-
 function ProductName() {
   return (
     <>

@@ -1,19 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import products from "../data/products.json";
 
-/**
-Función ProductsShort.
-Renderiza una sección que muestra los productos tipo "shorts", filtrados según
-un rango específico de identificadores.
-
-Entradas:
-No recibe parámetros directamente.
-
-Salidas:
-Retorna un componente JSX que despliega una cuadrícula con los productos
-cuyos identificadores están entre 69 y 77.
-*/
-
 const ProductsShort = () => {
   const ProductsMan = products.filter((p) => p.id >= 69 && p.id <= 77);
   const navigate = useNavigate();

@@ -8,15 +8,18 @@ import ContrasenaConfirma from "../components/confirmPassword";
 import { useNavigate, NavLink } from "react-router-dom";
 import { registerUser } from "../services/authenticationServices";
 import { postUserData } from "../services/Users";
+import { useDispatch } from "react-redux";
+import type { AppDispatch } from "../redux/store";
+import { fetchUser } from "../type/userSlice";
 
 function RegisterPage() {
-
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState("");
 
   const navigate = useNavigate();
+  const dispatch = useDispatch<AppDispatch>();
 
   const handleRegister = async () => {
     setError("");
@@ -29,11 +32,16 @@ function RegisterPage() {
     try {
       const user = await registerUser(email, password);
 
-      if (user?.email) {
-        await postUserData(user.email);
+      if (user?.id) {
+        await postUserData(user.id, user.email || email);
+        localStorage.setItem("userId", user.id);
+        // populate redux user state
+        dispatch((fetchUser(user.id) as any));
+        navigate("/user");
+        return;
       }
 
-      navigate("/"); 
+      navigate("/");
 
     } catch (err: any) {
       setError(err.message || "Error registering user");

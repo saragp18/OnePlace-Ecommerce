@@ -1,21 +1,20 @@
-import Navbar from "../components/Navbar"; // Barra de navegación
-import Footer from "../components/Footer"; // Footer de la página
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
-import HeroShirtsPage from "../components/HeroShirtsPage"; // Sección principal (hero)
-import ProductsShirts from "../components/ProductsShirts"; // Lista de productos tipo jean
-
+import HeroShirtsPage from "../components/HeroShirtsPage";
+import ProductsShirts from "../components/ProductsShirts";
 
 function ShirtsPage() {
   return (
 
     <div>
-        <Navbar />  {/* Navbar visible arriba */}
-        <HeroShirtsPage/>  {/* Hero de la sección camisas */}
-        <ProductsShirts />  {/* Lista de camisas */}
-        <Footer/>  {/* Footer de la página */}
+        <Navbar />
+        <HeroShirtsPage/>
+        <ProductsShirts />
+        <Footer/>
 
     </div>
 );
 }
 
-export default ShirtsPage; // Exportación de la página
+export default ShirtsPage;

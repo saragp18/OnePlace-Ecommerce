@@ -1,55 +1,119 @@
-import React, { useState } from "react";
+import { useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
 import UploadImg from "../components/UploadImageBtn";
-import CategoryMenu from "../components/CategoryMenu";
 import { useDispatch, useSelector } from "react-redux";
 import type { AppDispatch, RootState } from "../redux/store";
-import { createListing } from "../redux/listingsSlice";
+import { createPost } from "../redux/postsSlice";
+import { fetchUser } from "../type/userSlice";
 import { useNavigate } from "react-router-dom";
+import { postUserData } from "../services/Users";
+import supabase from "../services/supabaseClient";
 
 function AddProduct() {
-  // Inicializamos dispatch y navigate
   const dispatch = useDispatch<AppDispatch>();
   const navigate = useNavigate();
-
-  // Obtenemos los datos del usuario desde Redux
   const user = useSelector((state: RootState) => state.user.data);
+  const userLoading = useSelector((state: RootState) => state.user.loading);
 
-  // Estados para almacenar los valores del formulario
+  useEffect(() => {
+    const userId = localStorage.getItem("userId");
+    if (userId && !user) {
+      dispatch(fetchUser(userId));
+    }
+  }, [dispatch, user]);
+
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState("");
   const [category, setCategory] = useState("Women");
   const [available, setAvailable] = useState(true);
+  const [imageUrl, setImageUrl] = useState("");
 
-  // Función encargada de guardar la publicación
+  // Opciones predefinidas para el tipo (ahora es text, no enum)
+  const tipoRopaOptions = [
+    { value: "Women", label: "Women" },
+    { value: "Men", label: "Men" },
+    { value: "Jackets", label: "Jackets" },
+    { value: "Jeans", label: "Jeans" },
+    { value: "Shirts", label: "Shirts" },
+    { value: "T-Shirts", label: "T-Shirts" },
+    { value: "Bermudas", label: "Bermuda Shorts" },
+    { value: "Sweaters", label: "Sweaters" },
+  ];
+
   const handleSave = async () => {
-    // Validamos que el usuario esté autenticado
-    if (!user?.id) {
-      alert("Debes iniciar sesión para publicar.");
+    // Esperar a que termine de cargar el usuario si está en proceso
+    if (userLoading) {
       return;
     }
 
-    // Objeto con los datos del producto a crear
-    const listing = {
-      userId: user.id,
-      name,
-      description,
-      price,
-      category,
-      available,
-      image: "",  // Se actualiza cuando subas la imagen
+    if (!user?.id) {
+      alert("Debes iniciar sesión para publicar.");
+      navigate("/");
+      return;
+    }
+
+    // Validar campos requeridos
+    if (!name.trim() || !price.trim()) {
+      alert("Por favor completa al menos el nombre y el precio del producto.");
+      return;
+    }
+
+    // Verificar que el usuario exista en la tabla User, si no existe, crearlo
+    try {
+      // Intentar obtener el usuario de la sesión de auth primero
+      const { data: authUser } = await supabase.auth.getUser();
+      
+      if (!authUser.user) {
+        throw new Error("No se pudo obtener la información del usuario autenticado.");
+      }
+
+      // Verificar si existe en la tabla User
+      const { data: userData, error: userError } = await supabase
+        .from("User")
+        .select("id")
+        .eq("id", user.id)
+        .maybeSingle(); // Usar maybeSingle en lugar de single para evitar error si no existe
+
+      if (userError || !userData) {
+        // El usuario no existe en la tabla User, crearlo
+        await postUserData(user.id, authUser.user.email || "");
+      }
+    } catch (err: any) {
+      console.error("Error verificando/creando usuario:", err);
+      // Si el error es que el usuario ya existe, continuar
+      if (err.message && !err.message.includes("duplicate") && !err.message.includes("already exists")) {
+        alert("Error al verificar el usuario. Por favor, intenta de nuevo.");
+        return;
+      }
+    }
+
+    // Convertir el precio a número
+    const precioNumerico = parseFloat(price.trim().replace(/[^0-9.-]+/g, "")) || 0;
+
+    const postData = {
+      "user-id": user.id,
+      nombre: name.trim(),
+      descripcion: description.trim() || "Sin descripción",
+      precio: precioNumerico,
+      tipo: category || "Women", // Tipo de ropa (text)
+      disponible: available,
+      imagen: imageUrl || "", // URL de la imagen subida
     };
 
     try {
-      // Disparamos la acción para crear la publicación
-      await dispatch(createListing(listing)).unwrap();
-
-      // Navegamos al perfil del usuario
+      await dispatch(createPost(postData)).unwrap();
+      // Limpiar el formulario
+      setName("");
+      setDescription("");
+      setPrice("");
+      setCategory("Women");
+      setAvailable(true);
+      setImageUrl("");
       navigate("/user");
-    } catch (err) {
+    } catch (err: any) {
       console.error(err);
-      alert("Error al crear la publicación.");
+      alert(err || "Error al crear la publicación.");
     }
   };
 
@@ -81,8 +145,11 @@ function AddProduct() {
       <div className="flex flex-col md:flex-row justify-center items-start gap-8 sm:gap-10 px-4 sm:px-8 md:px-20 py-12 sm:py-16 bg-white">
         
         <div className="flex justify-center md:justify-start w-full md:w-1/3">
-          <div className="bg-gray-300 rounded-2xl w-48 sm:w-56 md:w-64 h-64 sm:h-72 md:h-80 flex items-center justify-center shadow-sm">
-            <UploadImg />
+          <div className="bg-gray-300 rounded-2xl w-48 sm:w-56 md:w-64 h-64 sm:h-72 md:h-80 flex items-center justify-center shadow-sm overflow-hidden">
+            <UploadImg 
+              onImageUploaded={(url) => setImageUrl(url)}
+              currentImageUrl={imageUrl}
+            />
           </div>
         </div>
 
@@ -143,9 +210,17 @@ function AddProduct() {
               <h2 className="text-xs sm:text-sm md:text-sm font-semibold mb-1 sm:mb-2 text-gray-800">
                 Category
               </h2>
-              <div className="flex justify-start w-full">
-                <CategoryMenu />
-              </div>
+              <select
+                value={category}
+                onChange={(e) => setCategory(e.target.value)}
+                className="w-full max-w-sm px-4 py-2 bg-gray-200 rounded-xl border-none focus:outline-none focus:ring-2 focus:ring-gray-400 shadow-inner"
+              >
+                {tipoRopaOptions.map((option) => (
+                  <option key={option.value} value={option.value}>
+                    {option.label}
+                  </option>
+                ))}
+              </select>
             </div>
 
             

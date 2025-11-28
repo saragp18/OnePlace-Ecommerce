@@ -1,15 +1,15 @@
-import Navbar from "../components/Navbar"; // Importa la barra de navegación
-import Footer from "../components/Footer"; // Importa el footer
-import HeroSweaterPage from "../components/HeroSweater"; // Importa el hero/banner para la categoría Sweaters
-import ProductsSweater from "../components/ProductsSweater"; // Importa el componente con los productos (sweaters)
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import HeroSweaterPage from "../components/HeroSweater";
+import ProductsSweater from "../components/ProductsSweater";
 
 function SueterPage() {
   return (
 
     <div>
         <Navbar />
-        <HeroSweaterPage/> {/* Banner principal de la página de suéteres */}
-        <ProductsSweater/> {/* Lista de productos tipo suéter */}
+        <HeroSweaterPage/>
+        <ProductsSweater/>
         <Footer/>
 
     </div>

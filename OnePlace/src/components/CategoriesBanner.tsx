@@ -1,14 +1,3 @@
-/**
-Función CategoriesBanner.
-Renderiza un banner en la parte superior de la sección de categorías, mostrando una imagen de fondo
-y un título centrado.
-
-Entradas:
-No recibe parámetros.
-
-Salidas:
-Retorna un componente JSX que muestra un banner con imagen de fondo y el texto "CATEGORIES".
-*/
 function CategoriesBanner() {
   return (
     <section

@@ -1,15 +1,3 @@
-/**
-Función CategoryMenu.
-Renderiza un menú de categorías en forma de cuadrícula con diferentes botones
-que representan tipos de productos disponibles.
-
-Entradas:
-No recibe parámetros.
-
-Salidas:
-Retorna un componente JSX que muestra una cuadrícula de botones interactivos
-correspondientes a distintas categorías como Women, Men, Jackets, Jeans, entre otras.
-*/
 function CategoryMenu() {
   return (
     <div className="bg-gray-100 p-4 rounded-xl grid grid-cols-2 gap-2">

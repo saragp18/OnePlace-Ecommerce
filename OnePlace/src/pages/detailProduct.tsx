@@ -3,30 +3,22 @@ import { useSelector, useDispatch } from "react-redux";
 import type { RootState, AppDispatch } from "../redux/store";
 import { addToCart } from "../redux/cartSlice";
 
-  // Componente que muestra el detalle de un producto
 const DetailProduct = () => {
-  // Obtenemos el id del producto desde la URL
   const { id } = useParams();
-  // Inicializamos dispatch para llamar acciones de Redux
   const dispatch = useDispatch<AppDispatch>();
 
-  // Buscamos el producto específico usando el id
   const product = useSelector((state: RootState) =>
     state.products.items.find(p => p.id === Number(id))
   );
 
-  // Si no existe el producto, mostramos mensaje
   if (!product) {
     return <div className="p-10">Product not found</div>;
   }
 
-   // Función que añade el producto al carrito
   const handleAddToCart = () => {
-    // Si la imagen es un array, tomamos la primera. Si no, lo convertimos a string
     const imageString = Array.isArray(product.image) ? product.image[0] || "" : (product.image as unknown as string) || "";
     const numericPrice = typeof product.price === "number" ? product.price : parseFloat(String(product.price).replace(/[^0-9.-]+/g, "")) || 0;
 
-    // Enviamos acción al store
     dispatch(
       addToCart({
         id: product.id,

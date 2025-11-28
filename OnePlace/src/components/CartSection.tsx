@@ -6,19 +6,7 @@ const CartSection = () => {
   const dispatch = useDispatch();
   const items = useSelector((state: RootState) => state.cart.items);
 
-
-/**
-Función parsePrice.
-Convierte un valor de precio en formato string o número a un número válido,
-asegurando que valores vacíos o inválidos retornen 0.
-
-Entradas:
-price: valor que puede ser string o number.
-
-Salidas:
-Retorna un número que representa el precio convertido.
-*/
-
+  // ✅ FUNCIÓN SEGURA PARA EXTRAER NÚMEROS DEL PRECIO
   const parsePrice = (price: string | number) => {
     if (!price) return 0;
 
@@ -28,18 +16,7 @@ Retorna un número que representa el precio convertido.
     return match ? Number(match[0]) : 0;
   };
 
-  /**
-Función CartSection.
-Obtiene los productos del carrito desde Redux, calcula el total y renderiza la interfaz.
-Incluye acciones para eliminar productos del carrito.
-
-Entradas:
-No recibe parámetros directamente.
-
-Salidas:
-Retorna un componente JSX que muestra los productos y sus totales.
-*/
-
+  // ✅ TOTAL CON CONVERSIÓN SEGURA
   const total = items.reduce((sum, item) => {
     const price = parsePrice(item.price);
     return sum + price * item.quantity;
