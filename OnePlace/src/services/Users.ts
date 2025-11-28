@@ -19,18 +19,17 @@ Salidas:
 Retorna el registro del usuario insertado o actualizado en Supabase.
 Lanza un error si ocurre algún problema durante la operación.
 */
-export async function postUserData(id: string, gmail: string) {
+export async function postUserData(gmail: string) {
+
     const { data, error } = await supabase
         .from('User')
-        .upsert({ id: id, gmail: gmail }, { onConflict: 'id' })
+        .insert({gmail:gmail})
         .select()
-        .maybeSingle();
-
     if (error) {
-        console.error('Error upserting user data:', error);
+        console.error('Error inserting user data:', error);
         throw error;
+    } else {
+        console.log('User data inserted successfully:', data);
+        return data;
     }
-
-    console.log('User data upserted successfully:', data);
-    return data;
 }
