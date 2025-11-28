@@ -1,5 +1,14 @@
 {
+  "name": "OnePlace-application",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "cd OnePlace && npm install && npm run build",
+    "start": "cd OnePlace && npm run preview"
+  },
   "dependencies": {
-    "react-router-dom": "^7.9.5"
+    "@reduxjs/toolkit": "^2.11.0",
+    "axios": "^1.13.2",
+    "react-redux": "^9.2.0",
+    "react-router-dom": "^7.9.6"
   }
 }
