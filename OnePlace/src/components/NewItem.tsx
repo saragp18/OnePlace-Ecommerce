@@ -2,6 +2,23 @@ import products from "../data/products.json";
 import "../App.css";
 import { useNavigate } from "react-router-dom";
 
+/**
+Función NewItemsSection.
+Filtra un conjunto específico de productos desde el archivo products.json y renderiza
+una cuadrícula visual con sus imágenes, nombres y precios. Permite navegar al detalle
+del producto al hacer clic.
+
+Entradas:
+No recibe parámetros.
+Utiliza internamente:
+- products.json para obtener los datos.
+- useNavigate para redirigir a la página del producto seleccionado.
+
+Salidas:
+Retorna un componente JSX que muestra una sección titulada "NEW PRODUCTS" y una
+cuadrícula con los productos cuyo id está entre 1 y 8. Cada tarjeta incluye imagen,
+nombre y precio. Al hacer clic en un producto, navega a /product/{id}.
+*/
 const NewItemsSection = () => {
   const newProducts = products.filter((p) => p.id >= 1 && p.id <= 8);
   const navigate = useNavigate();

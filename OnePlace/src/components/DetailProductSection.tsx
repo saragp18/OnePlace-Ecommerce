@@ -11,6 +11,26 @@ interface ProductDetailProps {
   materials: string[];
   images: string[];
 }
+/**
+Función ProductDetailPage.
+Renderiza la página de detalle de un producto, incluyendo galería de imágenes,
+información principal, selección de tallas y botones de interacción como 
+agregar al carrito, comprar y contactar.
+
+Entradas:
+- onclick: función ejecutada al presionar el botón “ADD TO CART”.
+- name: nombre del producto.
+- price: precio del producto.
+- color: color del producto.
+- sizes: lista de tallas disponibles.
+- description: descripción del producto.
+- materials: lista de materiales y cuidados.
+- images: arreglo de imágenes del producto, donde la primera es la principal.
+
+Salidas:
+Retorna un componente JSX que muestra la vista detallada del producto con
+galería, tallas seleccionables, botones de acción e información textual.
+*/
 
 function ProductDetailPage({
   onclick,

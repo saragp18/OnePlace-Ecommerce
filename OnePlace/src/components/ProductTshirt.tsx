@@ -1,6 +1,19 @@
 import { useNavigate } from "react-router-dom";
 import products from "../data/products.json";
 
+/**
+Función ProductsTshirt.
+Renderiza una sección que muestra los productos tipo camiseta (T-Shirt)
+filtrados según un rango específico de identificadores.
+
+Entradas:
+No recibe parámetros.
+
+Salidas:
+Retorna un componente JSX que despliega una cuadrícula con los productos
+cuyos identificadores están entre 59 y 68.
+*/
+
 const ProductsTshirt = () => {
   const ProductsMan = products.filter((p) => p.id >= 59 && p.id <= 68);
   const navigate = useNavigate();

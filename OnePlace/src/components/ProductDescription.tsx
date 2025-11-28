@@ -1,3 +1,16 @@
+/**
+Función ProductDes.
+Renderiza un campo de entrada de texto destinado a capturar la descripción
+de un producto.
+
+Entradas:
+No recibe parámetros.
+
+Salidas:
+Retorna un componente JSX que contiene un input estilizado con el placeholder
+"Product Description".
+*/
+
 function ProductDes() {
   return (
     <>

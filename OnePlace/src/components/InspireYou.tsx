@@ -1,3 +1,16 @@
+/**
+Función Inspire.
+Renderiza una sección inspiracional que combina una imagen destacada con texto
+y un botón de navegación para ver más contenido relacionado con outfits.
+
+Entradas:
+No recibe parámetros.
+
+Salidas:
+Retorna un componente JSX que muestra una imagen y un bloque de texto con un
+botón de acción, organizados en un layout responsivo.
+*/
+
 function Inspire() {
     return (
         <div className="flex flex-col md:flex-row bg-black shadow-lg gap-24">

@@ -1,5 +1,18 @@
 import type { Dispatch, SetStateAction } from "react";
 
+  /**
+  Función handleChange.
+  Captura el valor ingresado por el usuario en el input y lo envía al callback
+  recibido por props, permitiendo compatibilidad tanto con setState como con
+  funciones personalizadas.
+
+  Entradas:
+  e: Evento de cambio proveniente de un input HTML.
+
+  Salidas:
+  No retorna valor. Ejecuta la función onChange enviada por props, enviando
+  el texto actual del input.
+  */
 interface ChatProps {
   value: string;
   onChange: Dispatch<SetStateAction<string>> | ((val: string) => void);

@@ -1,4 +1,17 @@
   import categories from "../data/products.json"
+  
+/**
+Función CategoryGrid.
+Filtra un conjunto específico de productos desde el archivo products.json y renderiza una
+cuadrícula visual con sus imágenes y nombres.
+
+Entradas:
+No recibe parámetros.
+
+Salidas:
+Retorna un componente JSX que muestra una cuadrícula de categorías compuestas
+por imagen y nombre para los productos cuyo id está entre 18 y 22.
+*/
   function CategoryGrid(){
 
   const CategoriesProduct = categories.filter((p) => p.id >= 18 && p.id <= 22);

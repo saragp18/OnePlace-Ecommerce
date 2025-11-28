@@ -4,6 +4,29 @@ import { useSelector } from "react-redux";
 import type { RootState } from "../redux/store";
 import type { Product as DataProduct } from "../type/type";
 
+/**
+Función Navbar.
+Renderiza la barra de navegación principal del sitio, incluyendo enlaces, buscador,
+logotipo y menú responsive para dispositivos móviles.
+
+Entradas:
+No recibe parámetros directamente.
+Utiliza internamente:
+- useState: para manejar el estado del menú móvil (isOpen) y la búsqueda (query).
+- useSelector: para obtener la lista de productos desde Redux.
+- useNavigate: para redirigir al usuario a la página de un producto al buscarlo.
+
+Salidas:
+Retorna un componente JSX que muestra:
+- Navegación superior con logo y enlaces a distintas secciones.
+- Barra de búsqueda con autocompletado basado en los nombres de productos.
+- Icono del carrito.
+- Menú desplegable en versión móvil.
+Al ejecutar la búsqueda:
+  - Si encuentra el producto, redirige a /Product/{id}.
+  - Si no lo encuentra, muestra una alerta.
+*/
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [query, setQuery] = useState("");

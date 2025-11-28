@@ -3,6 +3,23 @@ import { useDispatch, useSelector } from "react-redux";
 import type { RootState, AppDispatch } from "../redux/store";
 import { fetchListingsByUser, deleteListing } from "../redux/listingsSlice";
 
+/**
+Función UserListings.
+Renderiza todas las publicaciones de productos creadas por el usuario actual,
+permitiendo visualizar nombre, descripción, precio y eliminar cada publicación.
+
+Entradas:
+No recibe parámetros. Obtiene los datos del usuario y las publicaciones
+directamente del store de Redux.
+
+Salidas:
+Retorna un componente JSX que muestra:
+- Un título indicando "Tus publicaciones"
+- Mensaje de carga mientras se obtienen los datos
+- Lista de publicaciones del usuario (nombre, descripción, precio)
+- Botón para eliminar cada publicación individual
+- Mensaje si el usuario no tiene publicaciones
+*/
 const UserListings: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>();
   const listings = useSelector((state: RootState) => state.listings.items);

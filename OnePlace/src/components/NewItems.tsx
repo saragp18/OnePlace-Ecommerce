@@ -12,6 +12,23 @@ const setups = [
 
 const repeatedSetups = [...setups, ...setups];
 
+/**
+Función NewItems.
+Renderiza un carrusel horizontal infinito de imágenes utilizando framer-motion. 
+Duplica el arreglo de ítems para generar un desplazamiento continuo hacia la izquierda.
+
+Entradas:
+No recibe parámetros.
+Utiliza internamente:
+- setups: lista de imágenes base.
+- repeatedSetups: arreglo duplicado para lograr el efecto de loop.
+- motion.div para animación continua (Framer Motion).
+
+Salidas:
+Retorna un componente JSX que muestra un carrusel auto-deslizable con los nuevos
+ítems, cada uno dentro de una tarjeta con hover animado.
+*/
+
 export default function NewItems() {
   return (
     <section className="bg-white py-20 overflow-hidden">

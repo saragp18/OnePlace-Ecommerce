@@ -1,4 +1,17 @@
   import categories from "../data/products.json"
+  
+  /**
+Función CategoryGridWoman.
+Filtra un conjunto específico de productos desde el archivo products.json y renderiza una
+cuadrícula visual con sus imágenes y nombres correspondientes a la categoría de mujer.
+
+Entradas:
+No recibe parámetros.
+
+Salidas:
+Retorna un componente JSX que muestra una cuadrícula de categorías compuestas por
+imagen y nombre para los productos cuyo id está entre 78 y 82.
+*/
   function CategoryGridWoman(){
 
   const CategoriesProduct = categories.filter((p) => p.id >= 78 && p.id <= 82);

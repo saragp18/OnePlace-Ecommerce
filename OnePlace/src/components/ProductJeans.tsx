@@ -1,6 +1,20 @@
 import { useNavigate } from "react-router-dom";
 import products from "../data/products.json";
 
+/**
+Función ProductsJeans.
+Filtra del archivo products.json los productos cuyo id está entre 41 y 49
+para mostrarlos como una cuadrícula de jeans. Al seleccionar un producto,
+redirecciona a su página de detalles.
+
+Entradas:
+No recibe parámetros.
+
+Salidas:
+Retorna un componente JSX que muestra una cuadrícula de productos tipo jeans,
+cada uno con imagen, nombre y precio, y permite navegar al detalle del producto.
+*/
+
 const ProductsJeans = () => {
   const ProductsMan = products.filter((p) => p.id >= 41 && p.id <= 49);
   const navigate = useNavigate();

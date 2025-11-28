@@ -38,9 +38,30 @@ const productsSlice = createSlice({
   name: "products",
   initialState,
   reducers: {
+
+/**
+Función selectProductById.
+Establece un producto como seleccionado en el estado de Redux usando su id.
+
+Entradas:
+- action.payload: number → Id del producto que se desea seleccionar.
+
+Salidas:
+Actualiza el estado selectedProductId con el id del producto seleccionado.
+*/
     selectProductById: (state, action) => {
       state.selectedProductId = action.payload;
     },
+/**
+Función clearSelectedProduct.
+Limpia el producto seleccionado del estado de Redux.
+
+Entradas:
+No recibe parámetros.
+
+Salidas:
+Establece selectedProductId en null.
+*/
     clearSelectedProduct: (state) => {
       state.selectedProductId = null;
     },

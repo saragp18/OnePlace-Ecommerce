@@ -3,12 +3,26 @@ import type { PayloadAction } from "@reduxjs/toolkit";
 import type { User } from "../redux/user";
 import supabase from "../services/supabaseClient";
 
+/**
+Función fetchUser.
+Obtiene los datos de un usuario desde Supabase dado su ID.
 
+Entradas:
+- userId: string → ID del usuario a consultar.
+
+Salidas:
+- Retorna un objeto normalizado del tipo User si se encuentra el usuario.
+- En caso de error, rechaza la promesa con un mensaje de error.
+*/
 export const fetchUser = createAsyncThunk<User, string>(
   "user/fetchUser",
   async (userId, { rejectWithValue }) => {
-    const { data, error } = await supabase.from("User").select("*").eq("id", userId).single();
+    const { data, error } = await supabase.from("User").select("*").eq("id", userId).maybeSingle();
     if (error) return rejectWithValue(error.message);
+
+    if (!data) {
+      return rejectWithValue("User not found");
+    }
 
     // Normalize possible column names coming from Supabase
     const normalized: User = {
@@ -23,6 +37,17 @@ export const fetchUser = createAsyncThunk<User, string>(
 );
 
 
+/**
+Función updateUser.
+Actualiza los datos de un usuario en Supabase.
+
+Entradas:
+- updatedUser: User → Objeto con la información actualizada del usuario.
+
+Salidas:
+- Retorna el objeto User actualizado si la operación es exitosa.
+- En caso de error, rechaza la promesa con un mensaje de error.
+*/
 export const updateUser = createAsyncThunk<User, User>(
   "user/updateUser",
   async (updatedUser, { rejectWithValue }) => {

@@ -3,6 +3,18 @@ import SearchBar from "./Navbar";
 import ViewAllBtn from "./ViewAllBtn";
 import sweaterImg from "/img/sueter one-place.jpg";
 
+/**
+Función Hero.
+Renderiza la sección principal (hero) de la página, incluyendo la barra de búsqueda,
+una imagen destacada y un bloque de texto promocional con un botón para ver más productos.
+
+Entradas:
+No recibe parámetros.
+
+Salidas:
+Retorna un componente JSX que muestra el hero completo con imagen, títulos y botón de navegación.
+*/
+
 function Hero() {
   return (
     <div className="relative w-full min-h-screen flex flex-col bg-gray-50">

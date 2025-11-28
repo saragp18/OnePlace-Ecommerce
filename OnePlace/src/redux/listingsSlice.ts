@@ -25,6 +25,16 @@ const initialState: ListingsState = {
   error: null,
 };
 
+/**
+Función fetchListingsByUser.
+Obtiene todas las publicaciones de un usuario específico desde Supabase.
+
+Entradas:
+- userId: string → Id del usuario cuyas publicaciones se quieren obtener.
+
+Salidas:
+Retorna un array de Listing o un error si falla la consulta.
+*/
 export const fetchListingsByUser = createAsyncThunk<Listing[], string>(
   "listings/fetchByUser",
   async (userId, { rejectWithValue }) => {
@@ -38,6 +48,16 @@ export const fetchListingsByUser = createAsyncThunk<Listing[], string>(
   }
 );
 
+/**
+Función createListing.
+Crea una nueva publicación en Supabase.
+
+Entradas:
+- listing: Listing → Objeto que contiene los datos de la publicación a crear.
+
+Salidas:
+Retorna el objeto Listing creado o un error si falla la creación.
+*/
 export const createListing = createAsyncThunk<Listing, Listing>(
   "listings/create",
   async (listing, { rejectWithValue }) => {
@@ -52,6 +72,16 @@ export const createListing = createAsyncThunk<Listing, Listing>(
   }
 );
 
+/**
+Función deleteListing.
+Elimina una publicación específica por su id.
+
+Entradas:
+- id: number → Id de la publicación a eliminar.
+
+Salidas:
+Retorna el id eliminado o un error si falla la eliminación.
+*/
 export const deleteListing = createAsyncThunk<number, number>(
   "listings/delete",
   async (id, { rejectWithValue }) => {

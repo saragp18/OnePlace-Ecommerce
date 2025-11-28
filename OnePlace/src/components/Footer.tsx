@@ -1,4 +1,15 @@
-function Footer() {
+/**
+Función Footer.
+Renderiza el pie de página del sitio, incluyendo una sección de suscripción,
+enlaces informativos de la compañía, redes sociales y métodos de pago aceptados.
+
+Entradas:
+No recibe parámetros.
+
+Salidas:
+Retorna un componente JSX que muestra el footer completo con información,
+secciones de navegación y un campo de suscripción al boletín.
+*/function Footer() {
   return (
     <footer className="bg-gray-100 px-16 py-12 font-sans">
       

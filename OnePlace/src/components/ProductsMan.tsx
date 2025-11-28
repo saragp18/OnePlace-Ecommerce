@@ -1,6 +1,16 @@
 import { useNavigate } from "react-router-dom";
 import products from "../data/products.json";
 
+/**
+Función ProductsMan.
+Componente que renderiza la sección de productos para hombres (MEN) filtrando los productos según un rango específico de IDs.
+
+Entradas:
+No recibe parámetros directamente.
+
+Salidas:
+Retorna un componente JSX que muestra los productos filtrados en una cuadrícula.
+*/
 const ProductsMan = () => {
   const ProductsMan = products.filter((p) => p.id >= 9 && p.id <= 17);
   const navigate = useNavigate();

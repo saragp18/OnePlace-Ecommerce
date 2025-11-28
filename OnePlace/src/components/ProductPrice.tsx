@@ -1,3 +1,15 @@
+/**
+Función ProductPrice.
+Renderiza un campo de entrada de texto destinado a capturar el precio del producto.
+
+Entradas:
+No recibe parámetros.
+
+Salidas:
+Retorna un componente JSX que contiene un input tipo texto
+para que el usuario ingrese el precio del producto.
+*/
+
 function ProductPrice() {
   return (
     <>
