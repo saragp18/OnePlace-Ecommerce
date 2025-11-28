@@ -1,15 +1,4 @@
-  /**
-  Función CreateYourStyle.
-  Renderiza una sección visual destacada con una imagen de fondo, un filtro
-  semitransparente y un bloque de texto promocional alineado a la derecha.
 
-  Entradas:
-  No recibe parámetros.
-
-  Salidas:
-  Retorna un componente JSX que muestra una sección tipo banner promocional
-  compuesta por una imagen, un overlay oscuro y un texto descriptivo.
-  */
 const CreateYourStyle = () => {
   return (
     <div

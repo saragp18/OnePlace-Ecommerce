@@ -1,16 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import products from "../data/products.json";
-/**
-Función ProductsMoresells.
-Renderiza una sección que muestra los productos más vendidos, filtrados según un rango específico de IDs.
 
-Entradas:
-No recibe parámetros directamente.
-
-Salidas:
-Retorna un componente JSX que despliega una cuadrícula de productos correspondientes
-a los identificadores entre 23 y 31.
-*/
 
 const ProductsMoresells = () => {
   const newProducts = products.filter((p) => p.id >= 23 && p.id <= 31);

@@ -3,62 +3,77 @@ import type { PayloadAction } from "@reduxjs/toolkit";
 import type { User } from "../redux/user";
 import supabase from "../services/supabaseClient";
 
-/**
-Función fetchUser.
-Obtiene los datos de un usuario desde Supabase dado su ID.
 
-Entradas:
-- userId: string → ID del usuario a consultar.
-
-Salidas:
-- Retorna un objeto normalizado del tipo User si se encuentra el usuario.
-- En caso de error, rechaza la promesa con un mensaje de error.
-*/
 export const fetchUser = createAsyncThunk<User, string>(
   "user/fetchUser",
   async (userId, { rejectWithValue }) => {
-    const { data, error } = await supabase.from("User").select("*").eq("id", userId).maybeSingle();
-    if (error) return rejectWithValue(error.message);
-
-    if (!data) {
-      return rejectWithValue("User not found");
+    // Primero intentar obtener el usuario de la sesión de autenticación
+    const { data: { user: authUser } } = await supabase.auth.getUser();
+    
+    // Intentar obtener datos de la tabla "User" (con mayúscula, como está en la BD)
+    let tableData = null;
+    const { data, error } = await supabase
+      .from("User")
+      .select("id, nombre, gmail")
+      .eq("id", userId)
+      .single();
+    
+    if (!error && data) {
+      tableData = data;
     }
 
-    // Normalize possible column names coming from Supabase
-    const normalized: User = {
-      id: (data as any)?.id,
-      name: (data as any)?.name || (data as any)?.nombre || (data as any)?.full_name || "",
-      email: (data as any)?.email || (data as any)?.gmail || "",
-      phone: (data as any)?.phone || (data as any)?.telefono || "",
-    };
+    // Si tenemos el usuario de autenticación, usarlo como base
+    if (authUser && authUser.id === userId) {
+      const normalized: User = {
+        id: userId,
+        name: tableData?.nombre || authUser.user_metadata?.name || authUser.email?.split("@")[0] || "",
+        email: tableData?.gmail || authUser.email || "",
+      };
+      return normalized;
+    }
 
-    return normalized;
+    // Si tenemos datos de la tabla pero no de auth, usar los de la tabla
+    if (tableData) {
+      const normalized: User = {
+        id: (tableData as any)?.id || userId,
+        name: (tableData as any)?.nombre || "",
+        email: (tableData as any)?.gmail || "",
+      };
+      return normalized;
+    }
+
+    // Si todo falla, rechazar con un mensaje de error
+    return rejectWithValue("No se pudo obtener la información del usuario. Verifica que la tabla 'User' exista y tenga los permisos correctos.");
   }
 );
 
 
-/**
-Función updateUser.
-Actualiza los datos de un usuario en Supabase.
-
-Entradas:
-- updatedUser: User → Objeto con la información actualizada del usuario.
-
-Salidas:
-- Retorna el objeto User actualizado si la operación es exitosa.
-- En caso de error, rechaza la promesa con un mensaje de error.
-*/
 export const updateUser = createAsyncThunk<User, User>(
   "user/updateUser",
   async (updatedUser, { rejectWithValue }) => {
+    // Mapear los campos del User interface a las columnas de la BD
+    const updateData: any = {
+      nombre: updatedUser.name,
+      gmail: updatedUser.email,
+    };
+
     const { data, error } = await supabase
       .from("User")
-      .update(updatedUser)
+      .update(updateData)
       .eq("id", updatedUser.id)
-      .select()
+      .select("id, nombre, gmail")
       .single();
+    
     if (error) return rejectWithValue(error.message);
-    return data as User;
+    
+    // Normalizar la respuesta de la BD al formato User
+    const normalized: User = {
+      id: (data as any)?.id,
+      name: (data as any)?.nombre || "",
+      email: (data as any)?.gmail || "",
+    };
+    
+    return normalized;
   }
 );
 

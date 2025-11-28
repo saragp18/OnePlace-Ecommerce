@@ -7,9 +7,7 @@ function CartPage() {
   return (
 
     <div>
-      {/* Barra de navegación superior */}
       <Navbar />
-      {/* Sección principal del carrito */}
       <CartComponent/>
       
       <Footer/>

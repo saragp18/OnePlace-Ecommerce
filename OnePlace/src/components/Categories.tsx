@@ -1,18 +1,5 @@
 import { NavLink } from "react-router-dom";
 
-
-/**
-Función Categories.
-Renderiza una sección con las diferentes categorías de la tienda, cada una enlazada
-a su respectiva ruta mediante NavLink.
-
-Entradas:
-No recibe parámetros.
-
-Salidas:
-Retorna un componente JSX que muestra una cuadrícula de categorías con imágenes,
-cada una navegando hacia su página correspondiente.
-*/
 const Categories = () => {
 
   return (

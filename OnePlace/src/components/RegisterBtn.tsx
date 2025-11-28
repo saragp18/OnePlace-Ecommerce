@@ -1,14 +1,3 @@
-/**
-Función Register.
-Renderiza un botón destinado a la acción de registro dentro de la interfaz.
-
-Entradas:
-No recibe parámetros.
-
-Salidas:
-Retorna un componente JSX que muestra un botón con estilos predefinidos,
-el cual representa la acción de registro para el usuario.
-*/
 function Register() {
   return (
     

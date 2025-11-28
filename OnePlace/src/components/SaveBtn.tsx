@@ -1,15 +1,3 @@
-/**
-Función SaveBtn.
-Renderiza un botón destinado a guardar la información ingresada por el usuario.
-
-Entradas:
-No recibe parámetros.
-
-Salidas:
-Retorna un componente JSX que muestra un botón con estilos predefinidos,
-el cual representa la acción de guardar dentro de la interfaz.
-*/
-
 function SaveBtn() {
   return (
     <button
