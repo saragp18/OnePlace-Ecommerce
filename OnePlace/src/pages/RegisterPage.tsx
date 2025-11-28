@@ -1,3 +1,4 @@
+// Importación de herramientas y componentes
 import { useState } from "react";
 import OnePlace from "../assets/LOGO-BOLSO-1.png";
 import Fondo from "../assets/collage.png";
@@ -10,6 +11,7 @@ import { registerUser } from "../services/authenticationServices";
 import { postUserData } from "../services/Users";
 
 function RegisterPage() {
+  // Estados para los inputs del formulario
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
@@ -17,6 +19,7 @@ function RegisterPage() {
 
   const navigate = useNavigate();
 
+  // Manejo del registro de usuario
   const handleRegister = async () => {
     setError("");
 
@@ -32,7 +35,7 @@ function RegisterPage() {
         await postUserData(user.email);
       }
 
-      navigate("/");
+      navigate("/"); // Redirige al login
 
     } catch (err: any) {
       setError(err.message || "Error registering user");

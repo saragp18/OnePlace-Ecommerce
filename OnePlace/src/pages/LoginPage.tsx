@@ -1,16 +1,22 @@
 import { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
+// Importación de imágenes
 import OnePlace from "../assets/LOGO-BOLSO-1.png";
 import Fondo from "../assets/collage.png";
+// Componentes
 import Register from "../components/RegisterBtn";
+// Servicios de autenticación
 import { loginUser } from "../services/authenticationServices";
 
 function LoginPage() {
+  // Estados del formulario
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+   // Navegación
   const navigate = useNavigate();
 
+  // Manejo del login
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     setError("");

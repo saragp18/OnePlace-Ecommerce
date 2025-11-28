@@ -8,22 +8,29 @@ import { createListing } from "../redux/listingsSlice";
 import { useNavigate } from "react-router-dom";
 
 function AddProduct() {
+  // Inicializamos dispatch y navigate
   const dispatch = useDispatch<AppDispatch>();
   const navigate = useNavigate();
+
+  // Obtenemos los datos del usuario desde Redux
   const user = useSelector((state: RootState) => state.user.data);
 
+  // Estados para almacenar los valores del formulario
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState("");
   const [category, setCategory] = useState("Women");
   const [available, setAvailable] = useState(true);
 
+  // Función encargada de guardar la publicación
   const handleSave = async () => {
+    // Validamos que el usuario esté autenticado
     if (!user?.id) {
       alert("Debes iniciar sesión para publicar.");
       return;
     }
 
+    // Objeto con los datos del producto a crear
     const listing = {
       userId: user.id,
       name,
@@ -31,11 +38,14 @@ function AddProduct() {
       price,
       category,
       available,
-      image: "",
+      image: "",  // Se actualiza cuando subas la imagen
     };
 
     try {
+      // Disparamos la acción para crear la publicación
       await dispatch(createListing(listing)).unwrap();
+
+      // Navegamos al perfil del usuario
       navigate("/user");
     } catch (err) {
       console.error(err);

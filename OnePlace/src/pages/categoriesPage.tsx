@@ -9,9 +9,13 @@ function CategoriesPage() {
   return (
 
     <div>
+      {/* Barra de navegación superior */}
       <Navbar />
+      {/* Banner principal de categorías */}
       <CategoriesBanner />
+      {/* Sección con las categorías disponibles */}
       <Categories />
+      {/* Sección de inspiración para el usuario */}
       <Inspire />
       <Footer/>
     </div>

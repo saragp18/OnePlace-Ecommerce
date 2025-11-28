@@ -1,3 +1,4 @@
+// Importaciones de React y librerías
 import { useEffect, useState } from 'react';
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
@@ -10,10 +11,14 @@ import product from "../data/products.json"
 import ProductDetailPage from '../components/DetailProductSection';
 
 function DetailProductPage() {
+  // Trae la información enviada por navigate() desde otra página
   const location = useLocation()
+   // Estado donde se guarda el producto actual
   const [item, setitem] = useState<Product>()
+  // Dispatch para usar las acciones de Redux
   const dispatch = useDispatch<AppDispatch>()
 
+  // Buscar el producto según el ID que viene en location.state
   useEffect(() => {
     function getitem() {
       const itemid = location.state
@@ -25,6 +30,7 @@ function DetailProductPage() {
     getitem()
   }, [location.state])
 
+  // Función que agrega el producto al carrito
   const handleAddToCart = () => {
     if (!item) return;
 
